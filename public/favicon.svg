@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#020617" />
+    </linearGradient>
+    <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366f1" />
+      <stop offset="50%" stop-color="#ec4899" />
+      <stop offset="100%" stop-color="#14b8a6" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="16" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+  
+  <!-- Base Background -->
+  <rect width="512" height="512" rx="128" fill="url(#bgGrad)" stroke="rgba(255,255,255,0.08)" stroke-width="8"/>
+  
+  <!-- Glowing Background Ring -->
+  <circle cx="256" cy="256" r="190" stroke="url(#logoGrad)" stroke-width="10" stroke-dasharray="120 40 60 40" filter="url(#glow)" opacity="0.85"/>
+  
+  <!-- Stylized VM Monogram text -->
+  <text x="256" y="275" font-family="'Syne', 'Outfit', 'Montserrat', sans-serif" font-weight="800" font-size="190" fill="url(#logoGrad)" text-anchor="middle" dominant-baseline="middle" letter-spacing="-8">VM</text>
+</svg>

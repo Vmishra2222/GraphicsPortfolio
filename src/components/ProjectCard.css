@@ -1,0 +1,233 @@
+.project-card {
+  border-radius: 4px; /* Cyberpunk sharp corners */
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+  border: 1px solid var(--card-border);
+  background: var(--card-bg);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease, box-shadow 0.4s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--accent-color);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), 0 0 25px rgba(0, 243, 255, 0.2);
+}
+
+.project-image {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  background: #050814;
+  border-bottom: 1px solid rgba(0, 243, 255, 0.1);
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.project-card:hover .project-image img {
+  transform: scale(1.08);
+}
+
+.project-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(5, 8, 20, 0.85);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  z-index: 2;
+  border: 1px solid var(--accent-color);
+}
+
+.project-card:hover .project-overlay {
+  opacity: 1;
+}
+
+/* HUD Scanning Line */
+.hud-scanner-line {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent 10%, var(--accent-color) 50%, transparent 90%);
+  box-shadow: 0 0 12px var(--accent-color), 0 0 4px var(--accent-color);
+  z-index: 3;
+  pointer-events: none;
+  animation: hud-scan 2.5s infinite linear;
+}
+
+/* HUD Target Scope */
+.hud-scope {
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  opacity: 0.6;
+  transition: transform 0.4s ease;
+}
+
+.project-card:hover .hud-scope {
+  transform: scale(1.1);
+  opacity: 0.85;
+}
+
+.scope-cross {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+}
+.scope-cross::before, .scope-cross::after {
+  content: '';
+  position: absolute;
+  background: var(--accent-color);
+}
+.scope-cross::before {
+  top: 7px; left: 0; width: 100%; height: 2px;
+}
+.scope-cross::after {
+  top: 0; left: 7px; width: 2px; height: 100%;
+}
+
+.scope-circle {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border: 1px dashed var(--accent-color);
+  border-radius: 50%;
+}
+
+.scope-circle-outer {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  border: 1px solid rgba(0, 243, 255, 0.2);
+  border-top-color: var(--accent-secondary);
+  border-bottom-color: var(--accent-secondary);
+  border-radius: 50%;
+}
+
+/* Diagnostics HUD readout text */
+.hud-diagnostics {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  right: 12px;
+  display: flex;
+  justify-content: space-between;
+  font-family: monospace;
+  font-size: 0.6rem;
+  color: var(--text-secondary);
+  background: rgba(5, 8, 20, 0.6);
+  padding: 4px 8px;
+  border: 1px solid rgba(0, 243, 255, 0.1);
+  border-radius: 2px;
+  pointer-events: none;
+  letter-spacing: 0.05em;
+}
+
+.diag-item {
+  color: var(--accent-color);
+}
+.diag-item:nth-child(even) {
+  color: var(--accent-secondary);
+}
+
+.view-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.7rem 1.4rem;
+  background: transparent;
+  color: var(--accent-color);
+  border: 1px solid var(--accent-color);
+  border-radius: 2px; /* Sharp corners */
+  font-weight: 700;
+  font-size: 0.8rem;
+  font-family: monospace;
+  cursor: pointer;
+  z-index: 5;
+  transform: translateY(15px);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  letter-spacing: 0.05em;
+  background: rgba(0, 243, 255, 0.05);
+}
+
+.project-card:hover .view-btn {
+  transform: translateY(0);
+}
+
+.view-btn:hover {
+  background: var(--accent-color);
+  color: #050814;
+  box-shadow: 0 0 15px var(--accent-glow);
+  border-color: var(--accent-color);
+}
+
+.project-category-badge {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  z-index: 5;
+  background: rgba(5, 8, 20, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: var(--accent-color);
+  border: 1px solid rgba(0, 243, 255, 0.25);
+  padding: 0.3rem 0.8rem;
+  border-radius: 2px; /* Sharp corners */
+  font-size: 0.7rem;
+  font-weight: 700;
+  font-family: monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: all 0.3s ease;
+}
+
+.project-card:hover .project-category-badge {
+  background: var(--accent-color);
+  color: #050814;
+  border-color: var(--accent-color);
+  box-shadow: 0 0 10px var(--accent-glow);
+}
+
+.project-content {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  border-top: 1px solid rgba(0, 243, 255, 0.05);
+  background: rgba(10, 15, 30, 0.2);
+}
+
+.project-content h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+  background: linear-gradient(135deg, #ffffff 60%, var(--accent-color) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: -0.01em;
+}
+
+.project-content p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin: 0;
+}

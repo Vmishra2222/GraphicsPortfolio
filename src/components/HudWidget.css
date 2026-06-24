@@ -1,0 +1,143 @@
+.hud-telemetry-widget {
+  position: fixed;
+  bottom: 24px;
+  left: 24px;
+  width: 260px;
+  background: rgba(5, 8, 20, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 243, 255, 0.15);
+  border-radius: 4px;
+  padding: 12px;
+  color: var(--text-primary);
+  font-family: monospace;
+  font-size: 0.75rem;
+  z-index: 9999;
+  pointer-events: auto;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 15px rgba(0, 243, 255, 0.05);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hud-telemetry-widget:hover {
+  border-color: rgba(0, 243, 255, 0.4);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6), 0 0 20px rgba(0, 243, 255, 0.15);
+}
+
+.hud-widget-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.hud-status-indicator {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.pulse-dot {
+  width: 6px;
+  height: 6px;
+  background-color: var(--accent-color);
+  border-radius: 50%;
+  box-shadow: 0 0 8px var(--accent-color);
+  animation: hud-pulse 1.5s infinite ease-in-out;
+}
+
+@keyframes hud-pulse {
+  0%, 100% { opacity: 0.3; transform: scale(0.9); }
+  50% { opacity: 1; transform: scale(1.1); }
+}
+
+.status-label {
+  font-size: 0.65rem;
+  letter-spacing: 0.05em;
+  color: var(--accent-color);
+  font-weight: 700;
+}
+
+.hud-time {
+  font-size: 0.7rem;
+  color: var(--text-secondary);
+}
+
+.hud-divider {
+  height: 1px;
+  background: linear-gradient(90deg, var(--accent-color) 0%, transparent 100%);
+  opacity: 0.25;
+  margin: 6px 0;
+}
+
+.hud-telemetry-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px 12px;
+  padding: 4px 0;
+}
+
+.telemetry-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.tel-label {
+  font-size: 0.6rem;
+  color: var(--text-muted);
+  letter-spacing: 0.05em;
+}
+
+.tel-val {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--accent-color);
+  text-shadow: 0 0 4px rgba(0, 243, 255, 0.2);
+}
+
+.tel-val.accent-pink {
+  color: var(--accent-secondary);
+  text-shadow: 0 0 4px rgba(255, 0, 127, 0.2);
+}
+
+.tel-val.accent-yellow {
+  color: var(--accent-tertiary);
+  text-shadow: 0 0 4px rgba(173, 255, 47, 0.2);
+}
+
+.hud-log-monitor {
+  padding-top: 4px;
+}
+
+.log-monitor-title {
+  font-size: 0.6rem;
+  color: var(--text-muted);
+  letter-spacing: 0.08em;
+  margin-bottom: 4px;
+  font-weight: 700;
+}
+
+.log-entries {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.log-entry-line {
+  font-size: 0.65rem;
+  color: var(--text-secondary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.log-chevron {
+  color: var(--accent-color);
+  margin-right: 2px;
+}
+
+/* Hide HUD on smaller viewports to keep UI clean */
+@media (max-width: 900px) {
+  .hud-telemetry-widget {
+    display: none;
+  }
+}

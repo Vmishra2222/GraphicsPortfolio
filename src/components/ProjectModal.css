@@ -1,0 +1,382 @@
+.modal-overlay-container {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1100;
+  padding: 3rem;
+}
+
+.modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(3, 3, 3, 0.82);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* Instagram-style Modal Card */
+.modal-instagram-card {
+  position: relative;
+  width: 100%;
+  max-width: 1120px;
+  height: 78vh;
+  max-height: 760px;
+  border-radius: 20px;
+  overflow: hidden;
+  background: rgba(10, 15, 30, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.9), 0 0 35px rgba(99, 102, 241, 0.1);
+  z-index: 10;
+}
+
+/* Inner Layout Grid */
+.instagram-layout-grid {
+  display: grid;
+  grid-template-columns: 1.25fr 1fr;
+  height: 100%;
+  width: 100%;
+}
+
+/* Left Media Column */
+.instagram-media-pane {
+  position: relative;
+  height: 100%;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Blurred background image behind the contained main image */
+.media-blur-background {
+  position: absolute;
+  inset: -20px;
+  background-size: cover;
+  background-position: center;
+  filter: blur(25px) brightness(0.5);
+  opacity: 0.6;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Sharp Contained Main Image */
+.media-contain-image {
+  position: relative;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  z-index: 2;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+}
+
+/* Right Information Panel */
+.instagram-info-pane {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: rgba(10, 15, 30, 0.85);
+  border-left: 1px solid rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+}
+
+/* Account Info Header */
+.pane-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem 1.75rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.01);
+}
+
+.header-avatar-placeholder {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent-color) 0%, var(--accent-secondary) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.header-text-block h4 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.15rem;
+}
+
+.header-text-block p {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.pane-badge {
+  margin-left: auto;
+  font-size: 0.7rem;
+}
+
+/* Scrollable Description Container */
+.pane-scroll-content {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding: 2rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+/* Scrollbar styling for sidebar panel */
+.pane-scroll-content::-webkit-scrollbar {
+  width: 5px;
+}
+.pane-scroll-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+.pane-scroll-content::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 99px;
+}
+
+.pane-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.border-top {
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding-top: 1.5rem;
+}
+
+.project-title-heading {
+  font-size: 1.6rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #fff 50%, #cbd5e1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1.25;
+}
+
+.project-brief-text {
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.05rem;
+  color: #a5b4fc;
+}
+
+.pane-section p {
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* Metadata Block: Tools, Client, Date */
+.meta-box {
+  padding: 1.25rem;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.meta-box h3, .meta-box h4 {
+  font-size: 0.9rem;
+  margin-bottom: 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: var(--text-primary);
+}
+
+.tools-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.tool-tag {
+  font-size: 0.72rem;
+  padding: 0.25rem 0.65rem;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  font-weight: 500;
+  color: var(--text-secondary);
+  transition: all 0.2s ease;
+}
+
+.tool-tag:hover {
+  background: rgba(99, 102, 241, 0.12);
+  border-color: rgba(99, 102, 241, 0.3);
+  color: #a5b4fc;
+}
+
+.meta-list-items {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.meta-item-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.88rem;
+}
+
+.meta-label {
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.meta-val {
+  color: var(--text-primary);
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Close Trigger styling (Fixed to top right of viewport, matches nav-arrow-btn style) */
+.modal-close-btn {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1120;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4);
+}
+
+.modal-close-btn:hover {
+  background: var(--accent-secondary);
+  border-color: var(--accent-secondary);
+  transform: scale(1.08) rotate(90deg);
+  box-shadow: 0 0 25px var(--accent-secondary-glow);
+}
+
+/* Navigation Arrow Buttons */
+.nav-arrow-btn {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1120;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4);
+}
+
+.prev-btn {
+  left: 2rem;
+}
+
+.next-btn {
+  right: 2rem;
+}
+
+.nav-arrow-btn:hover {
+  background: var(--accent-color);
+  border-color: var(--accent-color);
+  box-shadow: 0 0 25px var(--accent-glow);
+  color: white;
+}
+
+.prev-btn:hover {
+  transform: translateY(-50%) translateX(-4px);
+}
+
+.next-btn:hover {
+  transform: translateY(-50%) translateX(4px);
+}
+
+/* Responsive Overrides */
+@media (max-width: 960px) {
+  .modal-instagram-card {
+    height: 85vh;
+    max-height: none;
+    max-width: 600px;
+  }
+  
+  .instagram-layout-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1.1fr 1fr;
+    height: 100%;
+    overflow-y: auto;
+  }
+  
+  .instagram-media-pane {
+    height: 40vh;
+  }
+  
+  .instagram-info-pane {
+    height: auto;
+    border-left: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  
+  .modal-close-btn {
+    top: 1rem;
+    right: 1rem;
+  }
+  
+  .nav-arrow-btn {
+    width: 44px;
+    height: 44px;
+  }
+  
+  .prev-btn {
+    left: 0.5rem;
+  }
+  
+  .next-btn {
+    right: 0.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .modal-overlay-container {
+    padding: 1rem;
+  }
+  
+  .modal-instagram-card {
+    height: 90vh;
+  }
+  
+  .prev-btn, .next-btn {
+    display: none; /* Hide floating arrows on tiny screens to avoid layout clutter */
+  }
+}
