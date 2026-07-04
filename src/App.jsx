@@ -7,6 +7,7 @@ import Resume from './pages/Resume';
 import Projects from './pages/Projects';
 import Contact from './pages/Contact';
 import Loader from './components/Loader';
+import FontPreview from './pages/FontPreview';
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -39,6 +40,7 @@ function App() {
           <Route path="/resume" element={<Resume />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/fonts" element={<FontPreview />} />
         </Routes>
       </main>
       <Footer />
