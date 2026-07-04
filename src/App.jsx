@@ -8,6 +8,7 @@ import Projects from './pages/Projects';
 import Contact from './pages/Contact';
 import Loader from './components/Loader';
 import FontPreview from './pages/FontPreview';
+import GradientPreview from './pages/GradientPreview';
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -41,6 +42,7 @@ function App() {
           <Route path="/projects" element={<Projects />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/fonts" element={<FontPreview />} />
+          <Route path="/gradients" element={<GradientPreview />} />
         </Routes>
       </main>
       <Footer />
