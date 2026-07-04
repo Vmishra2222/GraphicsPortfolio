@@ -6,9 +6,7 @@ import Home from './pages/Home';
 import Resume from './pages/Resume';
 import Projects from './pages/Projects';
 import Contact from './pages/Contact';
-import DateStamp from './components/DateStamp';
 import Loader from './components/Loader';
-import HudWidget from './components/HudWidget';
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -34,8 +32,6 @@ function App() {
       {isLoading && <Loader onComplete={() => setIsLoading(false)} />}
       <Router>
       <Navbar />
-      <DateStamp />
-      <HudWidget />
       {/* Background Designer Guidelines */}
       <div className="designer-guidelines">
         <div className="guideline-v v1"><span className="coord">X: 0.08w</span></div>

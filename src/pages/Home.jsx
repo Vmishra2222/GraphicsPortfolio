@@ -242,19 +242,6 @@ const Home = () => {
       {/* Hero Section */}
       <BlindsReveal delay={0.15}>
         <section className="hero flex-center">
-          {/* Concentric Rotating Dials */}
-          <div className="hero-rings-container">
-            <svg className="hero-ring-svg" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="250" cy="250" r="230" stroke="rgba(0, 243, 255, 0.04)" strokeWidth="1" fill="none" />
-              <circle cx="250" cy="250" r="215" stroke="rgba(0, 243, 255, 0.12)" strokeWidth="2" strokeDasharray="10 30" className="rotate-cw" fill="none" />
-              <circle cx="250" cy="250" r="180" stroke="rgba(255, 0, 127, 0.08)" strokeWidth="1" fill="none" />
-              <circle cx="250" cy="250" r="165" stroke="rgba(255, 0, 127, 0.15)" strokeWidth="2.5" strokeDasharray="40 10 5 10" className="rotate-ccw" fill="none" />
-              <circle cx="250" cy="250" r="120" stroke="rgba(0, 243, 255, 0.04)" strokeWidth="1" fill="none" />
-              <circle cx="250" cy="250" r="105" stroke="rgba(173, 255, 47, 0.12)" strokeWidth="1.5" strokeDasharray="4 6" className="rotate-cw-fast" fill="none" />
-              <line x1="250" y1="20" x2="250" y2="480" stroke="rgba(0, 243, 255, 0.02)" strokeWidth="1" strokeDasharray="5 5" />
-              <line x1="20" y1="250" x2="480" y2="250" stroke="rgba(0, 243, 255, 0.02)" strokeWidth="1" strokeDasharray="5 5" />
-            </svg>
-          </div>
           <div className="container hero-container text-center">
             <motion.div
               initial={{ opacity: 0, y: -20 }}
@@ -299,9 +286,13 @@ const Home = () => {
               <a href="#showcase" className="btn btn-primary">
                 Explore Showcase <ArrowRight size={18} />
               </a>
-              <a href="#about" className="btn btn-outline" style={{ borderColor: 'var(--accent-secondary)', color: 'var(--accent-secondary)' }}>
-                Read Story
+              <a href="#about" className="btn btn-outline">
+                My Story
               </a>
+              <svg className="scribble-arrow-illustration" viewBox="0 0 120 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15 15 C 55 5, 85 20, 90 40 C 91 43, 92 45, 92 47" stroke="var(--accent-secondary)" strokeWidth="2.5" strokeLinecap="round" strokeDasharray="4 4" />
+                <path d="M80 34 L92 46 L102 36" stroke="var(--accent-secondary)" strokeWidth="2.5" strokeLinecap="round" />
+              </svg>
             </motion.div>
           </div>
         </section>
@@ -324,7 +315,7 @@ const Home = () => {
           <div className="container">
             <div className="about-grid">
               <motion.div 
-                className="about-image-card glass interactive-card hud-panel"
+                className="about-image-card glass interactive-card crop-marks-container"
                 initial={{ opacity: 0, x: -30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
@@ -335,11 +326,11 @@ const Home = () => {
                 tabIndex="0"
                 aria-label="View detailed about information and socials for Vaibhav Mishra"
               >
-                {/* Corner Brackets */}
-                <div className="hud-corner tl"></div>
-                <div className="hud-corner tr"></div>
-                <div className="hud-corner bl"></div>
-                <div className="hud-corner br"></div>
+                {/* Crop Marks */}
+                <div className="crop-mark tl"></div>
+                <div className="crop-mark tr"></div>
+                <div className="crop-mark bl"></div>
+                <div className="crop-mark br"></div>
                 <div className="cyber-grid-overlay" style={{ opacity: 0.15 }}></div>
                 <div className="avatar-image-container">
                   <img src="/assets/vaibhav_photo_1.png" alt="Vaibhav Mishra Portrait 1" className="avatar-img main-img" />

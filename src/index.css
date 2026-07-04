@@ -19,31 +19,31 @@
   --mouse-x: 0;
   --mouse-y: 0;
 
-  --bg-color: #050814;
-  --bg-dots: rgba(0, 243, 255, 0.04);
+  --bg-color: #030303;
+  --bg-dots: #ffffff0d;
   --text-primary: #f8fafc;
   --text-secondary: #94a3b8;
   --text-muted: #64748b;
   
-  /* Primary Accent: Electric Cyan */
-  --accent-color: #00f3ff;
-  --accent-glow: rgba(0, 243, 255, 0.35);
+  /* Primary Accent: Indigo */
+  --accent-color: #6366f1;
+  --accent-glow: #6366f173;
   
-  /* Secondary Accent: Neon Pink */
-  --accent-secondary: #ff007f;
-  --accent-secondary-glow: rgba(255, 0, 127, 0.25);
+  /* Secondary Accent: Pink */
+  --accent-secondary: #ec4899;
+  --accent-secondary-glow: #ec489959;
 
-  /* Tertiary Accent: Volt Yellow */
-  --accent-tertiary: #adff2f;
-  --accent-tertiary-glow: rgba(173, 255, 47, 0.25);
+  /* Tertiary Accent: Teal */
+  --accent-tertiary: #14b8a6;
+  --accent-tertiary-glow: rgba(20, 184, 166, 0.25);
 
   /* Card styling */
-  --card-bg: rgba(10, 15, 30, 0.4);
-  --card-border: rgba(0, 243, 255, 0.1);
-  --card-border-hover: rgba(0, 243, 255, 0.4);
+  --card-bg: #0f172a4d;
+  --card-border: #ffffff0f;
+  --card-border-hover: #6366f14d;
   
   /* Nav */
-  --nav-bg: rgba(5, 8, 20, 0.7);
+  --nav-bg: #03030399;
   
   --font-heading: 'Outfit', sans-serif;
   --font-body: 'Plus Jakarta Sans', sans-serif;

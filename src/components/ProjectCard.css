@@ -39,7 +39,7 @@
 .project-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(5, 8, 20, 0.85);
+  background: rgba(10, 15, 30, 0.85);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   display: flex;
@@ -48,103 +48,52 @@
   opacity: 0;
   transition: opacity 0.35s ease;
   z-index: 2;
-  border: 1px solid var(--accent-color);
+  border: 1.5px dashed rgba(20, 184, 166, 0.45);
 }
 
 .project-card:hover .project-overlay {
   opacity: 1;
 }
 
-/* HUD Scanning Line */
-.hud-scanner-line {
-  position: absolute;
-  left: 0;
+.blueprint-svg {
+  pointer-events: none;
   width: 100%;
-  height: 2px;
-  background: linear-gradient(90deg, transparent 10%, var(--accent-color) 50%, transparent 90%);
-  box-shadow: 0 0 12px var(--accent-color), 0 0 4px var(--accent-color);
-  z-index: 3;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+}
+
+.blueprint-coord {
+  color: rgba(20, 184, 166, 0.65);
   pointer-events: none;
-  animation: hud-scan 2.5s infinite linear;
-}
-
-/* HUD Target Scope */
-.hud-scope {
-  position: absolute;
-  width: 90px;
-  height: 90px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  pointer-events: none;
-  opacity: 0.6;
-  transition: transform 0.4s ease;
-}
-
-.project-card:hover .hud-scope {
-  transform: scale(1.1);
-  opacity: 0.85;
-}
-
-.scope-cross {
-  position: absolute;
-  width: 16px;
-  height: 16px;
-}
-.scope-cross::before, .scope-cross::after {
-  content: '';
-  position: absolute;
-  background: var(--accent-color);
-}
-.scope-cross::before {
-  top: 7px; left: 0; width: 100%; height: 2px;
-}
-.scope-cross::after {
-  top: 0; left: 7px; width: 2px; height: 100%;
-}
-
-.scope-circle {
-  position: absolute;
-  width: 60px;
-  height: 60px;
-  border: 1px dashed var(--accent-color);
-  border-radius: 50%;
-}
-
-.scope-circle-outer {
-  position: absolute;
-  width: 80px;
-  height: 80px;
-  border: 1px solid rgba(0, 243, 255, 0.2);
-  border-top-color: var(--accent-secondary);
-  border-bottom-color: var(--accent-secondary);
-  border-radius: 50%;
-}
-
-/* Diagnostics HUD readout text */
-.hud-diagnostics {
-  position: absolute;
-  bottom: 12px;
-  left: 12px;
-  right: 12px;
-  display: flex;
-  justify-content: space-between;
-  font-family: monospace;
-  font-size: 0.6rem;
-  color: var(--text-secondary);
-  background: rgba(5, 8, 20, 0.6);
-  padding: 4px 8px;
-  border: 1px solid rgba(0, 243, 255, 0.1);
+  letter-spacing: 0.02em;
+  background: rgba(10, 15, 30, 0.7);
+  border: 1px solid rgba(20, 184, 166, 0.2);
   border-radius: 2px;
-  pointer-events: none;
-  letter-spacing: 0.05em;
+  padding: 1px 4px;
+  font-family: monospace;
+  font-size: 0.65rem;
+  position: absolute;
 }
 
-.diag-item {
-  color: var(--accent-color);
+.blueprint-coord.top-left {
+  top: 8px;
+  left: 8px;
 }
-.diag-item:nth-child(even) {
-  color: var(--accent-secondary);
+
+.blueprint-coord.top-right {
+  top: 8px;
+  right: 8px;
+}
+
+.blueprint-coord.bottom-left {
+  bottom: 8px;
+  left: 8px;
+}
+
+.blueprint-coord.bottom-right {
+  bottom: 8px;
+  right: 8px;
 }
 
 .view-btn {
