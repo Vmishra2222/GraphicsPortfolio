@@ -50,7 +50,7 @@
   max-width: 950px;
   height: 85vh;
   max-height: 780px;
-  border-radius: 2px; /* Cyber sharp */
+  border-radius: 12px;
   overflow: hidden;
   background: rgba(5, 8, 20, 0.95);
   border: 1px solid rgba(0, 243, 255, 0.2);
@@ -82,7 +82,7 @@
 }
 .about-modal-media-pane::-webkit-scrollbar-thumb {
   background: rgba(0, 243, 255, 0.2);
-  border-radius: 0;
+  border-radius: 8px;
 }
 
 /* 1:1 Aspect Ratio Rounded Square image container */
@@ -91,7 +91,7 @@
   width: 190px;
   height: 190px;
   aspect-ratio: 1 / 1;
-  border-radius: 2px; /* Cyber sharp */
+  border-radius: 99px;
   overflow: hidden;
   border: 2px solid rgba(0, 243, 255, 0.25);
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
@@ -187,7 +187,7 @@
   background: rgba(0, 243, 255, 0.05);
   border: 1px solid rgba(0, 243, 255, 0.2);
   padding: 0.35rem 0.7rem;
-  border-radius: 2px; /* Sharp corners */
+  border-radius: 99px;
   font-size: 0.72rem;
   color: var(--accent-color);
   font-family: monospace;
@@ -199,7 +199,7 @@
   width: 100%;
   background: rgba(10, 15, 30, 0.3);
   border: 1px solid rgba(0, 243, 255, 0.15);
-  border-radius: 2px; /* Sharp corners */
+  border-radius: 8px;
   padding: 1.25rem;
   text-align: left;
   margin-top: 1rem;

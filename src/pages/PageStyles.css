@@ -55,7 +55,7 @@
 .timeline-item {
   position: relative;
   padding: 2rem;
-  border-radius: 2px; /* Cyber sharp */
+  border-radius: 12px; /* Rounded */
   background: rgba(10, 15, 30, 0.35);
   border: 1px solid rgba(0, 243, 255, 0.15);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
@@ -123,7 +123,7 @@
   background: rgba(0, 243, 255, 0.05);
   border: 1px solid rgba(0, 243, 255, 0.25);
   padding: 0.25rem 0.75rem;
-  border-radius: 2px;
+  border-radius: 12px;
   color: var(--accent-color);
   font-family: monospace;
 }
@@ -189,14 +189,14 @@
   width: 100%;
   background: rgba(20, 184, 166, 0.05);
   border: 1px solid rgba(20, 184, 166, 0.15);
-  border-radius: 0;
+  border-radius: 99px;
   overflow: hidden;
 }
 
 .skill-progress-bar-fill {
   height: 100%;
   background: var(--accent-color);
-  border-radius: 0;
+  border-radius: 99px;
 }
 
 /* Philosophy Checklist */
@@ -244,7 +244,7 @@
 
 .contact-info, .contact-form, .form-success-card {
   padding: 3rem;
-  border-radius: 2px; /* Cyber sharp corners */
+  border-radius: 12px; /* Rounded */
   border: 1px solid var(--card-border);
   background: rgba(10, 15, 30, 0.3);
 }
@@ -272,7 +272,7 @@
   background: rgba(0, 243, 255, 0.05);
   color: var(--accent-color);
   border: 1px solid rgba(0, 243, 255, 0.25);
-  border-radius: 2px; /* Cyber sharp */
+  border-radius: 12px; /* Rounded */
   flex-shrink: 0;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1), 0 0 10px rgba(0, 243, 255, 0.1);
 }
@@ -496,7 +496,7 @@
   align-items: center;
   gap: 0.6rem;
   padding: 0.5rem 1.2rem;
-  border-radius: 2px; /* Sharp corners */
+  border-radius: 99px; /* Rounded */
   background: rgba(20, 184, 166, 0.1);
   color: var(--accent-tertiary);
   border: 1px solid rgba(20, 184, 166, 0.25);

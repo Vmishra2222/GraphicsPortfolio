@@ -234,6 +234,7 @@ p {
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid var(--card-border);
+  border-radius: 12px;
   transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
 }
 
@@ -281,7 +282,7 @@ p {
   justify-content: center;
   gap: 0.6rem;
   padding: 0.85rem 1.8rem;
-  border-radius: 4px; /* Cyberpunk styled sharp borders instead of pill shape */
+  border-radius: 99px; /* Rounded pill style */
   font-family: var(--font-body);
   font-weight: 600;
   font-size: 0.95rem;
@@ -320,7 +321,7 @@ p {
 .badge {
   display: inline-flex;
   padding: 0.25rem 0.75rem;
-  border-radius: 2px; /* Sharp corners */
+  border-radius: 99px; /* Rounded pill style */
   font-size: 0.75rem;
   font-weight: 600;
   text-transform: uppercase;

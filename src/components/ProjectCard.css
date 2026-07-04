@@ -1,5 +1,5 @@
 .project-card {
-  border-radius: 4px; /* Cyberpunk sharp corners */
+  border-radius: 12px; /* Modern rounded corners */
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -29,6 +29,8 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
   transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -69,7 +71,7 @@
   letter-spacing: 0.02em;
   background: rgba(10, 15, 30, 0.7);
   border: 1px solid rgba(20, 184, 166, 0.2);
-  border-radius: 2px;
+  border-radius: 99px;
   padding: 1px 4px;
   font-family: monospace;
   font-size: 0.65rem;
@@ -104,7 +106,7 @@
   background: transparent;
   color: var(--accent-color);
   border: 1px solid var(--accent-color);
-  border-radius: 2px; /* Sharp corners */
+  border-radius: 99px; /* Rounded corners */
   font-weight: 700;
   font-size: 0.8rem;
   font-family: monospace;
@@ -138,7 +140,7 @@
   color: var(--accent-color);
   border: 1px solid rgba(0, 243, 255, 0.25);
   padding: 0.3rem 0.8rem;
-  border-radius: 2px; /* Sharp corners */
+  border-radius: 99px;
   font-size: 0.7rem;
   font-weight: 700;
   font-family: monospace;
