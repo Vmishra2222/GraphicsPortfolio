@@ -289,10 +289,7 @@ const Home = () => {
               <a href="#about" className="btn btn-outline">
                 My Story
               </a>
-              <svg className="scribble-arrow-illustration" viewBox="0 0 120 70" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M15 15 C 55 5, 85 20, 90 40 C 91 43, 92 45, 92 47" stroke="var(--accent-secondary)" strokeWidth="2.5" strokeLinecap="round" strokeDasharray="4 4" />
-                <path d="M80 34 L92 46 L102 36" stroke="var(--accent-secondary)" strokeWidth="2.5" strokeLinecap="round" />
-              </svg>
+
             </motion.div>
           </div>
         </section>
@@ -315,7 +312,7 @@ const Home = () => {
           <div className="container">
             <div className="about-grid">
               <motion.div 
-                className="about-image-card glass interactive-card crop-marks-container"
+                className="about-image-card glass interactive-card"
                 initial={{ opacity: 0, x: -30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
@@ -326,11 +323,7 @@ const Home = () => {
                 tabIndex="0"
                 aria-label="View detailed about information and socials for Vaibhav Mishra"
               >
-                {/* Crop Marks */}
-                <div className="crop-mark tl"></div>
-                <div className="crop-mark tr"></div>
-                <div className="crop-mark bl"></div>
-                <div className="crop-mark br"></div>
+
                 <div className="cyber-grid-overlay" style={{ opacity: 0.15 }}></div>
                 <div className="avatar-image-container">
                   <img src="/assets/vaibhav_photo_1.png" alt="Vaibhav Mishra Portrait 1" className="avatar-img main-img" />
@@ -415,24 +408,8 @@ const Home = () => {
         <section id="showcase" className="showcase-section section-padding">
           <div className="container">
             <div className="section-header text-center">
-              <div className="flex-center animate-fade-in" style={{ gap: '1rem', marginBottom: '1.5rem', flexWrap: 'wrap' }}>
-                <span className="badge" style={{ margin: 0 }}>Media Gallery</span>
-                
-                {/* Color Calibration Bar */}
-                <div className="color-calibration-bar">
-                  <svg className="registration-mark" viewBox="0 0 24 24" fill="none" style={{ width: '12px', height: '12px' }}>
-                    <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="2" />
-                    <path d="M12 2v20M2 12h20" stroke="currentColor" strokeWidth="2" />
-                  </svg>
-                  <div className="color-swatches">
-                    <span className="swatch slate"></span>
-                    <span className="swatch indigo"></span>
-                    <span className="swatch pink"></span>
-                    <span className="swatch cyan"></span>
-                    <span className="swatch white"></span>
-                  </div>
-                  <span>PMS: 325C // RGB</span>
-                </div>
+              <div className="flex-center animate-fade-in" style={{ marginBottom: '1.5rem' }}>
+                <span className="badge">Media Gallery</span>
               </div>
               
               <h2>My Creative Media Showcase</h2>
@@ -440,17 +417,11 @@ const Home = () => {
                 Browse through my design collection. Click on any design card to read the complete creative story, client context, and tools utilized in its creation.
               </p>
               
-              {/* Ruler divider */}
-              <div className="artboard-ruler animate-fade-in delay-100">
-                <div className="ruler-h"></div>
-              </div>
+
               
               {/* Category Filter Tabs */}
-              <div className="category-tabs-wrapper glass crop-marks-container">
-                <div className="crop-mark tl"></div>
-                <div className="crop-mark tr"></div>
-                <div className="crop-mark bl"></div>
-                <div className="crop-mark br"></div>
+              <div className="category-tabs-wrapper glass">
+
                 {categories.map((category) => (
                   <button
                     key={category}

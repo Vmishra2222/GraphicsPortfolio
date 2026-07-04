@@ -8,11 +8,7 @@ const ProjectCard = ({ title, description, image, category, delay, onClick }) =>
       onClick={onClick}
       style={{ cursor: 'pointer' }}
     >
-      {/* Crop Marks */}
-      <div className="crop-mark tl"></div>
-      <div className="crop-mark tr"></div>
-      <div className="crop-mark bl"></div>
-      <div className="crop-mark br"></div>
+
       
       <div className="project-image">
         <img src={image} alt={title} loading="lazy" />

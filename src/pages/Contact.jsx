@@ -78,12 +78,8 @@ const Contact = () => {
         <div className="contact-container animate-fade-in delay-100">
           
           {/* Info Column */}
-          <div className="contact-info glass crop-marks-container">
-            {/* Crop marks */}
-            <div className="crop-mark tl"></div>
-            <div className="crop-mark tr"></div>
-            <div className="crop-mark bl"></div>
-            <div className="crop-mark br"></div>
+          <div className="contact-info glass ">
+
             <h2>Let's build something beautiful.</h2>
             <p>You can contact me through the form, or reach out directly via phone and email. I generally respond within 24 hours.</p>
             
@@ -117,12 +113,8 @@ const Contact = () => {
                 </button>
               </div>
             ) : (
-              <form className="contact-form glass crop-marks-container" onSubmit={handleSubmit}>
-                {/* Crop marks */}
-                <div className="crop-mark tl"></div>
-                <div className="crop-mark tr"></div>
-                <div className="crop-mark bl"></div>
-                <div className="crop-mark br"></div>
+              <form className="contact-form glass " onSubmit={handleSubmit}>
+
                 <div className="form-group">
                   <label htmlFor="name">Name</label>
                   <input 
@@ -169,11 +161,7 @@ const Contact = () => {
                     )}
                   </button>
                   
-                  {/* Scribble Arrow pointing to Send button */}
-                  <svg className="scribble-arrow-annotation" viewBox="0 0 100 60" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ bottom: '-42px', left: '15px', width: '70px', height: '40px', transform: 'scaleY(-1) rotate(-10deg)' }}>
-                    <path d="M10 10 C 40 5, 70 15, 75 35 M 65 25 L 75 35 L 82 23" stroke="var(--accent-secondary)" strokeWidth="2.5" strokeLinecap="round" />
-                  </svg>
-                  <span className="scribble-doodle-label" style={{ bottom: '-38px', left: '90px', fontSize: '0.95rem' }}>let's build!</span>
+
                 </div>
               </form>
             )}

@@ -32,13 +32,7 @@ function App() {
       {isLoading && <Loader onComplete={() => setIsLoading(false)} />}
       <Router>
       <Navbar />
-      {/* Background Designer Guidelines */}
-      <div className="designer-guidelines">
-        <div className="guideline-v v1"><span className="coord">X: 0.08w</span></div>
-        <div className="guideline-v v2"><span className="coord">X: 0.92w</span></div>
-        <div className="guideline-h h1"><span className="coord">Y: 160px</span></div>
-        <div className="guideline-h h2"><span className="coord">Y: 0.88h</span></div>
-      </div>
+
       <main>
         <Routes>
           <Route path="/" element={<Home />} />

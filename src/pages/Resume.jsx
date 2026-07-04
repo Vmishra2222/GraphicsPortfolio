@@ -79,11 +79,7 @@ const Resume = () => {
               <Download size={18} /> Download Full Resume (PDF)
             </button>
             
-            {/* Scribble Arrow pointing to CV download button */}
-            <svg className="scribble-arrow-annotation" viewBox="0 0 100 60" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ top: '-20px', left: 'calc(100% + 15px)', width: '80px', height: '50px' }}>
-              <path d="M10 10 C 40 5, 70 15, 75 35 M 65 25 L 75 35 L 82 23" stroke="var(--accent-secondary)" strokeWidth="2.5" strokeLinecap="round" />
-            </svg>
-            <span className="scribble-doodle-label" style={{ top: '-25px', left: 'calc(100% + 85px)' }}>pdf for print!</span>
+
           </div>
         </div>
         
@@ -98,12 +94,8 @@ const Resume = () => {
               
               <div className="timeline-list">
                 {experienceData.map((item, idx) => (
-                  <div key={idx} className="timeline-item glass crop-marks-container">
-                    {/* Crop marks */}
-                    <div className="crop-mark tl"></div>
-                    <div className="crop-mark tr"></div>
-                    <div className="crop-mark bl"></div>
-                    <div className="crop-mark br"></div>
+                  <div key={idx} className="timeline-item glass ">
+
                     <div className="timeline-marker achievement-marker"></div>
                     <div className="timeline-header">
                       <h3>{item.title}</h3>
@@ -122,12 +114,8 @@ const Resume = () => {
               
               <div className="timeline-list">
                 {educationData.map((item, idx) => (
-                  <div key={idx} className="timeline-item glass crop-marks-container">
-                    {/* Crop marks */}
-                    <div className="crop-mark tl"></div>
-                    <div className="crop-mark tr"></div>
-                    <div className="crop-mark bl"></div>
-                    <div className="crop-mark br"></div>
+                  <div key={idx} className="timeline-item glass ">
+
                     <div className="timeline-marker"></div>
                     <div className="timeline-header">
                       <h3>{item.degree}</h3>
@@ -147,7 +135,7 @@ const Resume = () => {
                 
                 <div className="timeline-list">
                   {achievementsData.map((item, idx) => (
-                    <div key={idx} className="timeline-item glass crop-marks-container">
+                    <div key={idx} className="timeline-item glass ">
                       {/* Crop marks */}
                       <div className="crop-mark tl"></div>
                       <div className="crop-mark tr"></div>
@@ -171,12 +159,8 @@ const Resume = () => {
           {/* Right Column: Skills & Approach */}
           <div className="resume-sidebar">
             
-            <div className="sidebar-resume-card glass crop-marks-container">
-              {/* Crop marks */}
-              <div className="crop-mark tl"></div>
-              <div className="crop-mark tr"></div>
-              <div className="crop-mark bl"></div>
-              <div className="crop-mark br"></div>
+            <div className="sidebar-resume-card glass ">
+
               <h2>Design & Technical Skills</h2>
               <div className="skills-bars-container">
                 {skillsData.map((skill, idx) => (
@@ -196,12 +180,8 @@ const Resume = () => {
               </div>
             </div>
 
-            <div className="sidebar-resume-card glass crop-marks-container">
-              {/* Crop marks */}
-              <div className="crop-mark tl"></div>
-              <div className="crop-mark tr"></div>
-              <div className="crop-mark bl"></div>
-              <div className="crop-mark br"></div>
+            <div className="sidebar-resume-card glass ">
+
               <h2>Core Design Philosophy</h2>
               <ul className="philosophy-checklist">
                 <li>
@@ -231,12 +211,8 @@ const Resume = () => {
 
         {/* Flashy Opportunities & Recruiter Callout Banner */}
         <div className="recruiter-cta-section animate-fade-in delay-300">
-          <div className="recruiter-cta-card glass crop-marks-container">
-            {/* Design Crop Marks */}
-            <div className="crop-mark tl"></div>
-            <div className="crop-mark tr"></div>
-            <div className="crop-mark bl"></div>
-            <div className="crop-mark br"></div>
+          <div className="recruiter-cta-card glass ">
+
             
             <div className="cta-status-badge">
               <span className="pulse-dot"></span>
