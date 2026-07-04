@@ -25,22 +25,22 @@
   --text-secondary: #94a3b8;
   --text-muted: #64748b;
   
-  /* Primary Accent: Indigo */
-  --accent-color: #6366f1;
-  --accent-glow: #6366f173;
+  /* Primary Accent: Teal */
+  --accent-color: #14b8a6;
+  --accent-glow: rgba(20, 184, 166, 0.35);
   
-  /* Secondary Accent: Pink */
-  --accent-secondary: #ec4899;
-  --accent-secondary-glow: #ec489959;
+  /* Secondary Accent: same Teal */
+  --accent-secondary: #14b8a6;
+  --accent-secondary-glow: rgba(20, 184, 166, 0.25);
 
-  /* Tertiary Accent: Teal */
+  /* Tertiary Accent: same Teal */
   --accent-tertiary: #14b8a6;
   --accent-tertiary-glow: rgba(20, 184, 166, 0.25);
 
   /* Card styling */
   --card-bg: #0f172a4d;
   --card-border: #ffffff0f;
-  --card-border-hover: #6366f14d;
+  --card-border-hover: rgba(20, 184, 166, 0.3);
   
   /* Nav */
   --nav-bg: #03030399;
@@ -183,20 +183,16 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   font-size: clamp(2.8rem, 7vw, 4.8rem);
   letter-spacing: -0.03em;
-  background: linear-gradient(135deg, #ffffff 30%, var(--accent-color) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #ffffff;
   text-shadow: 0 0 20px var(--accent-glow);
 }
 
 h2 {
   font-size: clamp(2rem, 4.5vw, 2.75rem);
   letter-spacing: -0.02em;
-  background: linear-gradient(135deg, #ffffff 40%, var(--accent-color) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #ffffff;
   margin-bottom: 2rem;
-  text-shadow: 0 0 15px rgba(0, 243, 255, 0.15);
+  text-shadow: 0 0 15px rgba(20, 184, 166, 0.15);
 }
 
 p {
@@ -269,8 +265,8 @@ p {
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, var(--accent-color) 0%, #4f46e5 100%);
-  color: #fff;
+  background: var(--accent-color);
+  color: #030303;
   font-weight: 700;
   box-shadow: 0 4px 20px var(--accent-glow);
 }
@@ -278,7 +274,7 @@ p {
 .btn-primary:hover {
   transform: translateY(-2px);
   box-shadow: 0 8px 30px var(--accent-glow);
-  filter: brightness(1.1);
+  filter: brightness(1.15);
 }
 
 .btn-outline {

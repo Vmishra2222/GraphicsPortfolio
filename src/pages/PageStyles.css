@@ -187,15 +187,15 @@
 .skill-progress-bar-track {
   height: 6px;
   width: 100%;
-  background: rgba(0, 243, 255, 0.05);
-  border: 1px solid rgba(0, 243, 255, 0.15);
+  background: rgba(20, 184, 166, 0.05);
+  border: 1px solid rgba(20, 184, 166, 0.15);
   border-radius: 0;
   overflow: hidden;
 }
 
 .skill-progress-bar-fill {
   height: 100%;
-  background: linear-gradient(to right, var(--accent-color), var(--accent-secondary));
+  background: var(--accent-color);
   border-radius: 0;
 }
 
@@ -245,15 +245,13 @@
 .contact-info, .contact-form, .form-success-card {
   padding: 3rem;
   border-radius: 2px; /* Cyber sharp corners */
-  border: 1px solid rgba(0, 243, 255, 0.15);
+  border: 1px solid var(--card-border);
   background: rgba(10, 15, 30, 0.3);
 }
 
 .contact-info h2 {
   font-size: 2rem;
-  background: linear-gradient(135deg, #fff 40%, var(--accent-color) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #ffffff;
   margin-bottom: 1.5rem;
   line-height: 1.3;
 }
@@ -478,8 +476,8 @@
 .recruiter-cta-card {
   padding: 3.5rem 3rem;
   border-radius: 2px; /* Cyber sharp */
-  background: linear-gradient(135deg, rgba(10, 15, 30, 0.6) 0%, rgba(0, 243, 255, 0.03) 100%);
-  border: 1px solid rgba(0, 243, 255, 0.15);
+  background: #0f172a4d;
+  border: 1px solid var(--card-border);
   position: relative;
   text-align: center;
   overflow: hidden;
@@ -489,7 +487,7 @@
 
 .recruiter-cta-card:hover {
   border-color: var(--accent-secondary);
-  box-shadow: 0 30px 60px -15px rgba(0, 243, 255, 0.15), 0 0 40px -10px rgba(255, 0, 127, 0.15);
+  box-shadow: 0 30px 60px -15px rgba(20, 184, 166, 0.15), 0 0 40px -10px rgba(20, 184, 166, 0.15);
   transform: translateY(-4px);
 }
 
@@ -499,9 +497,9 @@
   gap: 0.6rem;
   padding: 0.5rem 1.2rem;
   border-radius: 2px; /* Sharp corners */
-  background: rgba(173, 255, 47, 0.1);
+  background: rgba(20, 184, 166, 0.1);
   color: var(--accent-tertiary);
-  border: 1px solid rgba(173, 255, 47, 0.25);
+  border: 1px solid rgba(20, 184, 166, 0.25);
   font-size: 0.75rem;
   font-family: monospace;
   font-weight: 700;
@@ -515,22 +513,22 @@
   height: 8px;
   border-radius: 50%;
   background-color: var(--accent-tertiary);
-  box-shadow: 0 0 0 0 rgba(173, 255, 47, 0.7);
-  animation: pulse-yellow 1.5s infinite;
+  box-shadow: 0 0 0 0 rgba(20, 184, 166, 0.7);
+  animation: pulse-teal 1.5s infinite;
 }
 
-@keyframes pulse-yellow {
+@keyframes pulse-teal {
   0% {
     transform: scale(0.95);
-    box-shadow: 0 0 0 0 rgba(173, 255, 47, 0.7);
+    box-shadow: 0 0 0 0 rgba(20, 184, 166, 0.7);
   }
   70% {
     transform: scale(1);
-    box-shadow: 0 0 0 6px rgba(173, 255, 47, 0);
+    box-shadow: 0 0 0 6px rgba(20, 184, 166, 0);
   }
   100% {
     transform: scale(0.95);
-    box-shadow: 0 0 0 0 rgba(173, 255, 47, 0);
+    box-shadow: 0 0 0 0 rgba(20, 184, 166, 0);
   }
 }
 
@@ -539,9 +537,7 @@
   font-weight: 800;
   letter-spacing: -0.02em;
   margin-bottom: 1rem;
-  background: linear-gradient(135deg, #ffffff 40%, var(--accent-color) 70%, var(--accent-secondary) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #ffffff;
 }
 
 .cta-content p {
