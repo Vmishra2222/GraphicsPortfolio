@@ -62,6 +62,12 @@ html, body, a, button, select, [role="button"], .btn, .project-card, .social-ico
   cursor: url('/pencil_cursor.png') 0 0, auto !important;
 }
 
+@keyframes moveGradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
 body {
   font-family: var(--font-body);
   background-color: var(--bg-color);
@@ -73,17 +79,38 @@ body {
   position: relative;
 }
 
-/* Background grid and blobs */
+/* Layer 1: Slate Minimalist Shifting Gradient Background */
 body::before {
   content: '';
   position: fixed;
-  inset: 0;
-  background-image: 
-    radial-gradient(var(--bg-dots) 1px, transparent 1px);
+  width: 106vw;
+  height: 106vh;
+  top: -3vh;
+  left: -3vw;
+  z-index: -3;
+  background: linear-gradient(-45deg, #030303, #09090b, #18181b, #27272a);
+  background-size: 300% 300%;
+  animation: moveGradient 15s ease infinite;
+  transform: translate(calc(var(--mouse-x) * -15px), calc(var(--mouse-y) * -15px));
+  transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  pointer-events: none;
+}
+
+/* Layer 2: Parallax Dot Grid Overlay (shifts slightly faster for 3D depth) */
+body::after {
+  content: '';
+  position: fixed;
+  width: 108vw;
+  height: 108vh;
+  top: -4vh;
+  left: -4vw;
+  z-index: -2;
+  background-image: radial-gradient(var(--bg-dots) 1px, transparent 1px);
   background-size: 24px 24px;
   pointer-events: none;
-  z-index: -2;
   opacity: 0.7;
+  transform: translate(calc(var(--mouse-x) * -25px), calc(var(--mouse-y) * -25px));
+  transition: transform 0.25s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
 /* Decorative animated background elements with mouse parallax */
