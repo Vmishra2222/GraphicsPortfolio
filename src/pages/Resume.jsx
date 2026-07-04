@@ -1,4 +1,4 @@
-import { Download, Calendar, Award, BookOpen, Sparkles, CheckCircle, ArrowRight } from 'lucide-react';
+import { Download, Calendar, Award, BookOpen, CheckCircle, ArrowRight } from 'lucide-react';
 import BlindsReveal from '../components/BlindsReveal';
 import './PageStyles.css';
 
@@ -61,10 +61,7 @@ const Resume = () => {
 
   return (
     <div className="page-wrapper container">
-      <div className="bg-blobs">
-        <div className="bg-blob-1"></div>
-        <div className="bg-blob-2"></div>
-      </div>
+
 
       <BlindsReveal delay={0.1}>
         <div className="page-header text-center animate-fade-in">
@@ -131,7 +128,7 @@ const Resume = () => {
             {/* Achievements / Credentials */}
             {achievementsData.length > 0 && (
               <div className="timeline-section">
-                <h2 className="timeline-section-title"><Sparkles size={24} /> Credentials & Certifications</h2>
+                <h2 className="timeline-section-title"><Award size={24} /> Credentials & Certifications</h2>
                 
                 <div className="timeline-list">
                   {achievementsData.map((item, idx) => (

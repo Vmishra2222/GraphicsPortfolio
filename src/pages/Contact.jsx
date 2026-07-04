@@ -60,11 +60,7 @@ const Contact = () => {
 
   return (
     <div className="page-wrapper container">
-      {/* Decorative Blobs */}
-      <div className="bg-blobs">
-        <div className="bg-blob-2"></div>
-        <div className="bg-blob-3"></div>
-      </div>
+
 
       <BlindsReveal delay={0.1}>
         <div className="page-header text-center animate-fade-in">

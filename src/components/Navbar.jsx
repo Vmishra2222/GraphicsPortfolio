@@ -1,5 +1,5 @@
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { Menu, X, Sparkles } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import './Navbar.css';
 
@@ -97,7 +97,7 @@ const Navbar = () => {
       <div className="container nav-container">
         <div className="logo">
           <Link to="/" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-            <span className="brand-name">Vaibhav Mishra <Sparkles size={22} className="logo-sparkle" /></span>
+            <span className="brand-name">Vaibhav Mishra</span>
             <span className="brand-title">Engineering Undergraduate</span>
           </Link>
         </div>

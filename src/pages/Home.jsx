@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   ArrowRight, 
-  Sparkles, 
   Paintbrush, 
   Layers, 
   Compass, 
@@ -192,12 +191,7 @@ const Home = () => {
 
   return (
     <div className="home-page">
-      {/* Decorative Blobs for Ambient Glow */}
-      <div className="bg-blobs">
-        <div className="bg-blob-1"></div>
-        <div className="bg-blob-2"></div>
-        <div className="bg-blob-3"></div>
-      </div>
+
 
       {/* Bezier Vector Art illustration floating on the right side of hero */}
       <svg className="bezier-vector-art" style={{ top: '15%', right: '8%', width: '450px', height: '350px' }} viewBox="0 0 450 350" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -249,7 +243,7 @@ const Home = () => {
               transition={{ duration: 0.8 }}
               className="hero-badge"
             >
-              <Sparkles size={18} className="sparkle-icon" /> B.Tech CSE Student & Digital Artist
+              B.Tech CSE Student & Digital Artist
             </motion.div>
 
             <motion.h1 
