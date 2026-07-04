@@ -20,90 +20,90 @@ const projectsData = [
   {
     title: 'Logo for KrishiAI',
     category: 'Logos',
-    description: 'Designed the logo for KrishiAI, an agricultural technology startup, combining neuron patterns with leaf shapes.',
+    description: 'The KrishiAI logo merges technology and agriculture, symbolizing growth and efficiency in transforming the farming industry with artificial intelligence.',
     image: '/assets/logo_krishiai_1777718739708.png',
     tools: ['Adobe Illustrator', 'Figma', 'Vector Design'],
     client: 'KrishiAI Technologies',
     date: 'January 2026',
-    challenge: 'Create a clean, scalable logo that represents both farming (leaves) and technology (circuits).',
-    story: 'I sketched leaves overlaid with grid points, then refined the shape into a clean monogram. The green represents agriculture, while the dark indigo represents technology.'
+    challenge: 'To design a recognizable, scalable logo that links the organic nature of agriculture (leaves, growth) with digital intelligence (circuits, network nodes) without cluttering the brand symbol.',
+    story: 'I began by sketching overlapping plant leaves overlaid with neural network points. After iterating on various shapes, I finalized a balanced monogram that combines a leaf contour with a circuit path. The color palette utilizes emerald green representing agriculture, blended into deep indigo representing high-end technology. This emblem successfully gives KrishiAI a trustworthy, modern look.'
   },
   {
     title: 'Designs For Restaurant',
     category: 'Branding',
-    description: 'Created menus, menu covers, and business cards for a restaurant in Kotdwar.',
+    description: "Created a comprehensive branding package for a restaurant in Kotdwar. Encompasses a menu highlighting culinary offerings, a menu cover, and business cards.",
     image: '/assets/restaurant_brand_1777718960983.jpeg',
     tools: ['Adobe Photoshop', 'Adobe Illustrator', 'Print Design'],
     client: 'Restaurant in Kotdwar',
     date: 'March 2026',
-    challenge: 'Create a simple visual identity for printed menus and cards that feels clean and modern.',
-    story: 'I selected warm earth tones with dark accents. The menu uses a readable grid layout, and the business cards keep a clean, minimalist style.'
+    challenge: 'To design a cohesive visual identity that matches the warm atmosphere of the restaurant. Needs to look welcoming yet highly premium and modern for printed materials.',
+    story: 'For this branding suite, I selected warm earth tones combined with dark accents. The menu utilizes a clean, readable typographic grid. I designed business cards to leave a memorable impression, ensuring each component elevates the dining experience.'
   },
   {
     title: 'TeamUp Esports Brand',
     category: 'Startups & Ventures',
-    description: 'Co-founded an Esports team. Created the team logo, uniform designs, and social media graphics.',
+    description: 'Co-founded a professional Esports brand catering to PlayersUnknownBattleGround (PUBG) gamers. Served as Graphic Designer, UI/UX developer, and Social Media Manager.',
     image: '/assets/teamup_esports.png',
     tools: ['Adobe Photoshop', 'UI/UX Design', 'Social Media Branding'],
     client: 'TeamUp Esports (Co-founded)',
     date: '2024 - Present',
-    challenge: 'Build a cohesive and recognizable gaming brand for competitive play.',
-    story: 'As co-founder and lead designer, I created the visual assets for the team, including jersey illustrations, social media templates, and banners.'
+    challenge: 'To design an active esports gaming identity, including team logos, banners, UI layouts, and social media templates for PUBG players, ensuring a fierce and recognizable style.',
+    story: 'We co-founded TeamUp Esports to bring together PUBG players. As Lead Designer, I set the neon cyber aesthetic, designing high-contrast team emblems, gaming hoodies, and digital social overlays.'
   },
   {
     title: 'U-Connect Platform',
     category: 'Startups & Ventures',
-    description: 'A student project to enable peer-to-peer sharing and recycling of textbooks and materials.',
+    description: 'Founded an Educational Resource UpCycling Platform during my first year of B.Tech CSE majors to enable peer-to-peer resource sharing.',
     image: '/assets/u_connect.png',
     tools: ['UI/UX Design', 'Product Concept', 'B.Tech CSE Project'],
     client: 'U-Connect Upcycling (CSE Project)',
     date: '2023 - 2024',
-    challenge: 'Design a simple interface and promotional materials to launch the platform.',
-    story: 'We started U-Connect to prevent textbook waste. I designed the green and blue logo and the promotional flyers.'
+    challenge: 'To design a clean, minimal user interface and promotional flyer package for a peer-to-peer educational resource sharing and upcycling platform.',
+    story: 'In my first year of CSE, my classmate and I realized a huge amount of textbooks and materials were discarded each semester. We founded U-Connect to recycle resources. I worked on the branding, structuring a clean node-based green and blue logo accompanied by promotional materials.'
   },
   {
     title: 'Thumbnail Designs',
     category: 'YouTube Content',
-    description: 'Created custom YouTube thumbnails designed to improve video click-through rates.',
+    description: 'Thumbnail for a popular YouTube channel, boosting video click-through rates (CTR) by 60%. Highly engaging design conveying messages instantly.',
     image: '/assets/youtube_thumbnail_1777719927884.png',
     tools: ['Adobe Photoshop', 'Lightroom', 'Custom Typography'],
     client: 'TechVibe YouTube Channel',
     date: 'April 2026',
-    challenge: 'Make the thumbnails clear and easy to read on small mobile screens.',
-    story: 'I used high-contrast colors to highlight the main subject and selected bold text that remains legible on small screens.'
+    challenge: 'To design thumbnails that immediately stand out on mobile feeds and convey complex video themes within 1 second of viewing.',
+    story: 'I applied high-saturation color grading to make the central subject pop against a dark, contrasting background. Using bold, customized type with drop shadows and glowing outlines ensures readability on tiny screens.'
   },
   {
     title: 'Social Media Content',
     category: 'Branding',
-    description: 'Designed social media graphics and template sets for consistent brand accounts.',
+    description: 'Provided dynamic social media content that includes eye-catching posts and stories designed to engage audiences and elevate brand presence.',
     image: '/assets/social_media_1777719976276.jpg',
     tools: ['Adobe Photoshop', 'Figma', 'Canva Pro'],
     client: 'Omni Retail Group',
     date: 'February 2026',
-    challenge: 'Create reusable templates that keep the feed looking uniform.',
-    story: 'I built a simple layout grid with set fonts and colors, making it quick to lay out new posts while keeping a clean style.'
+    challenge: 'To design templates for Instagram posts and stories that maintain absolute brand consistency while keeping each individual post unique and engaging.',
+    story: 'I developed a design system consisting of strict grid ratios, recurring color blocks, and specific font weights. This modular framework allows for fast layouts while keeping the feed looking curated and professional.'
   },
   {
     title: 'Flyers for College Events',
     category: 'Marketing',
-    description: 'Designed schedule flyers for a youth parliament event, organizing schedule details clearly.',
+    description: 'Designed the flyers for CONNAITRE 24, the event hosted by the Youth Parliament Society of Law Dehradun. Focused on creating visually appealing and informative layouts.',
     image: '/assets/event_flyer_1777720017711.jpg',
     tools: ['Adobe Illustrator', 'InDesign', 'Layout Grid'],
     client: 'Youth Parliament Society of Law Dehradun',
     date: 'October 2025',
-    challenge: 'Present schedules, speakers, and registration details clearly on a single page.',
-    story: 'I split the layout into three sections: a bold title at the top, speaker profiles in the middle, and date/registration info at the bottom.'
+    challenge: 'To organize a large amount of event details in a clean flyer without overwhelming the reader.',
+    story: 'I handled the visual hierarchy by dividing the flyer into three distinct sections. The top section draws interest with a bold header design, the middle holds speaker details, and the bottom uses simple icon layouts for dates and QR-code registration.'
   },
   {
     title: 'Invitation Cards',
     category: 'Marketing',
-    description: 'Designed custom print invitation cards for family events.',
+    description: 'Created several custom invitation cards for personal and family functions, featuring elegant typography and visually stunning compositions.',
     image: '/assets/invitation_card_1777720086351.png',
     tools: ['Adobe Illustrator', 'Print Design', 'Color Theory'],
     client: 'Family Celebrations',
     date: 'November 2025',
-    challenge: 'Create a clean, print-ready invitation layout using classic typography.',
-    story: 'I drew vector line frames and paired elegant serif fonts with scripts to create a classic look.'
+    challenge: 'To design invitations that capture personal stories and familial warmth in a classic, luxury format suitable for print.',
+    story: 'I hand-drew delicate line-art ornaments and border frames in Illustrator to establish a classic look. Pairings of script fonts with modern serifs create a balanced composition.'
   }
 ];
 
@@ -274,7 +274,7 @@ const Home = () => {
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
-              I study Computer Science Engineering and work on graphic design and photography. Explore my projects below.
+              Welcome! My site is a reflection of my journey filled with ups, downs, and pretty cool stuff I have done. Explore my experiences from Computer Science Engineering to Photography and Graphic Design.
             </motion.p>
 
             <motion.div 
@@ -356,12 +356,12 @@ const Home = () => {
                 transition={{ duration: 0.8 }}
               >
                 <span className="badge">About Me</span>
-                <h2>Engineering and Design</h2>
+                <h2>Fusing Technical Engineering with Creative Arts</h2>
                 <p className="about-text-lead">
-                  I study Computer Science Engineering in Dehradun and work on graphic design and photography.
+                  I am a Graphic Design and Photography enthusiast with a solid Computer Science Engineering background. Currently pursuing B.Tech in Dehradun, UK.
                 </p>
                 <p className="about-text-body">
-                  I focus on clean designs that look professional and work well, from branding projects to custom illustrations.
+                  My creative journey in graphic design has been an exploration of blending aesthetics with functionality. From digital branding elements to vector illustrations, I focus on constructing assets that elevate user experiences and marketing click-throughs.
                 </p>
                 
                 <div className="skills-grid">
@@ -414,7 +414,7 @@ const Home = () => {
               
               <h2>My Creative Media Showcase</h2>
               <p className="mx-auto header-description">
-                Explore my design collection below. Click on any card to read about the project backstory and tools used.
+                Browse through my design collection. Click on any design card to read the complete creative story, client context, and tools utilized in its creation.
               </p>
               
 

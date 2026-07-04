@@ -71,7 +71,7 @@ const Contact = () => {
           <span className="badge">Get in Touch</span>
           <h1>Connect With Me</h1>
           <p className="mx-auto header-description">
-            Feel free to reach out. I respond to inquiries within 24 hours.
+            Have an upcoming design project or just want to chat about creative ideas? Feel free to reach out. I am available for inquiries and collaborations.
           </p>
         </div>
         
@@ -80,8 +80,8 @@ const Contact = () => {
           {/* Info Column */}
           <div className="contact-info glass ">
 
-            <h2>Get in touch.</h2>
-            <p>Use the form or email me directly.</p>
+            <h2>Let's build something beautiful.</h2>
+            <p>You can contact me through the form, or reach out directly via phone and email. I generally respond within 24 hours.</p>
             
             <div className="info-item">
               <div className="icon-wrapper"><Phone size={22} /></div>

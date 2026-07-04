@@ -7,13 +7,13 @@ const educationData = [
     institution: 'Uttaranchal University, Dehradun',
     degree: 'Bachelor of Technology in Computer Science and Engineering',
     duration: '2023 - 2027',
-    details: 'Studying computer science fundamentals, including data structures, algorithms, and programming in C, C++, Python, and JavaScript.'
+    details: 'Bachelor of Technology in Computer Science and Engineering focusing on programming in C, C++, JavaScript, and Python. Curriculum covers data structures, algorithms, and software development principles, emphasizing problem-solving and the design of efficient, scalable, and user-friendly applications.'
   },
   {
     institution: 'Indian Institute of Technology, Madras (Distance Learning)',
     degree: 'Bachelor of Science in Data Science',
     duration: '2025 - Present',
-    details: 'Online degree covering data analysis, statistics, and machine learning models.'
+    details: 'Bachelor of Science in Data Science (Distance Learning) from IIT Madras, focused on core concepts of data science, statistics, and AI/ML. Covers data analysis, machine learning algorithms, and real-world applications, with emphasis on problem-solving, data-driven decision-making, and modern analytical tools.'
   },
   {
     institution: 'CBSE Senior Secondary School, Varanasi, Uttar Pradesh',
@@ -28,13 +28,13 @@ const experienceData = [
     title: 'Co-Founder & Lead Designer',
     org: 'TeamUp Esports',
     date: '2024 - Present',
-    desc: 'Co-founded an Esports brand. Designed team logos, jerseys, and graphics.'
+    desc: 'Co-founded a professional Esports brand catering to PlayersUnknownBattleGround (PUBG) players. Served as Graphic Designer, UI/UX developer, and Social Media Manager.'
   },
   {
     title: 'Co-Founder',
     org: 'U-Connect Platform',
     date: '2023 - 2024',
-    desc: 'Co-founded a peer sharing platform for study materials and textbooks.'
+    desc: 'Co-founded U-Connect, an Educational Resource UpCycling Platform, during my first year of B.Tech CSE. Handled the visual layouts and promotional flyers.'
   }
 ];
 
@@ -71,7 +71,7 @@ const Resume = () => {
           <span className="badge">Curriculum Vitae</span>
           <h1>My Professional Resume</h1>
           <p className="mx-auto header-description">
-            A summary of my education, experience, and skills. You can download the PDF copy below.
+            Explore my journey from Engineering studies in Dehradun to Photography and Graphic Design ventures. Click below to download a print-ready PDF copy.
           </p>
           
           <div className="header-cta animate-fade-in delay-100 relative-span">
@@ -222,7 +222,7 @@ const Resume = () => {
             <div className="cta-content">
               <h2>Ready for new challenges and collaborations</h2>
               <p>
-                Looking for software engineering internships. I want to build clean, fast web applications and work on frontend or backend development.
+                Seeking software development and engineering internships. I am eager to apply my technical stack in AI/ML (Python, C++) and UI/UX design concepts to help build modern, high-performance web products.
               </p>
               <div className="cta-actions">
                 <a href="/contact" className="btn btn-primary">
