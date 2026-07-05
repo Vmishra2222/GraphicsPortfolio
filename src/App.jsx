@@ -44,7 +44,7 @@ function App() {
     <>
       {isLoading && <Loader onComplete={() => setIsLoading(false)} />}
       <Router>
-      <Navbar />
+      <Navbar theme={theme} setTheme={setTheme} />
 
       <main>
         <Routes>

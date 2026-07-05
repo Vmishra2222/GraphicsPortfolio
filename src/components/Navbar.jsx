@@ -1,9 +1,9 @@
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Sun, Moon } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import './Navbar.css';
 
-const Navbar = () => {
+const Navbar = ({ theme, setTheme }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrollOpacity, setScrollOpacity] = useState(0);
   const location = useLocation();
@@ -84,12 +84,13 @@ const Navbar = () => {
   const isOpaque = scrollOpacity === 1 || isOpen;
 
   const headerStyle = {
-    background: isOpaque ? '#030303' : `rgba(3, 3, 3, ${scrollOpacity * 0.98})`,
-    backdropFilter: isOpaque ? 'blur(16px)' : (scrollOpacity > 0 ? `blur(${scrollOpacity * 16}px)` : 'none'),
-    WebkitBackdropFilter: isOpaque ? 'blur(16px)' : (scrollOpacity > 0 ? `blur(${scrollOpacity * 16}px)` : 'none'),
-    borderBottom: `1px solid rgba(255, 255, 255, ${isOpaque ? 0.08 : scrollOpacity * 0.08})`,
-    boxShadow: isOpaque ? '0 10px 30px -10px rgba(0, 0, 0, 0.5)' : `0 10px 30px -10px rgba(0, 0, 0, ${scrollOpacity * 0.5})`,
+    background: isOpaque ? 'var(--nav-bg)' : 'transparent',
+    backdropFilter: isOpaque ? 'blur(16px)' : 'none',
+    WebkitBackdropFilter: isOpaque ? 'blur(16px)' : 'none',
+    borderBottom: `1px solid ${isOpaque ? 'var(--card-border)' : 'transparent'}`,
+    boxShadow: isOpaque ? '0 10px 30px -10px rgba(0, 0, 0, 0.15)' : 'none',
     padding: `${1.25 - (isOpaque ? 1 : scrollOpacity) * 0.4}rem 0`,
+    transition: 'background 0.3s ease, border-bottom 0.3s ease, padding 0.3s ease'
   };
 
   return (
@@ -135,8 +136,18 @@ const Navbar = () => {
           </ul>
         </nav>
 
-        <div className="mobile-toggle" onClick={() => setIsOpen(!isOpen)} aria-label="Toggle menu">
-          {isOpen ? <X size={24} /> : <Menu size={24} />}
+        <div className="nav-actions">
+          <button 
+            className="theme-toggle-btn"
+            onClick={() => setTheme(theme === 'light' ? 'default' : 'light')}
+            aria-label="Toggle Theme"
+          >
+            {theme === 'light' ? <Moon size={20} /> : <Sun size={20} />}
+          </button>
+
+          <div className="mobile-toggle" onClick={() => setIsOpen(!isOpen)} aria-label="Toggle menu">
+            {isOpen ? <X size={24} /> : <Menu size={24} />}
+          </div>
         </div>
       </div>
     </header>

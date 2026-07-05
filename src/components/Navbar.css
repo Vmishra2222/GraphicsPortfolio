@@ -37,7 +37,7 @@
   font-weight: 700;
   font-style: normal;
   text-transform: none;
-  color: #ffffff;
+  color: var(--text-primary);
   line-height: 1.1;
   letter-spacing: -0.02em;
   display: flex;
@@ -46,7 +46,7 @@
 }
 
 .logo-sparkle {
-  color: #ffffff;
+  color: var(--text-primary);
 }
 
 .brand-title {
@@ -75,7 +75,7 @@
 
 .nav-link:hover,
 .nav-link.active-link {
-  color: white;
+  color: var(--text-primary);
 }
 
 .nav-link::after {
@@ -105,6 +105,33 @@
   transform: scale(1.1);
 }
 
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.theme-toggle-btn {
+  background: transparent;
+  border: 1px solid var(--card-border);
+  color: var(--text-primary);
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.theme-toggle-btn:hover {
+  background: var(--card-bg);
+  border-color: var(--accent-color);
+  color: var(--accent-color);
+  transform: scale(1.08);
+}
+
 @media (max-width: 768px) {
   .mobile-toggle {
     display: block;
@@ -115,10 +142,10 @@
     top: 100%;
     left: 0;
     width: 100%;
-    background: rgba(3, 3, 3, 0.95);
+    background: var(--nav-bg);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    border-bottom: 1px solid var(--card-border);
     padding: 2.5rem 2rem;
     clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
     transition: clip-path 0.4s cubic-bezier(0.16, 1, 0.3, 1);
