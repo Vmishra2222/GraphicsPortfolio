@@ -9,9 +9,20 @@ import Contact from './pages/Contact';
 import Loader from './components/Loader';
 import FontPreview from './pages/FontPreview';
 import GradientPreview from './pages/GradientPreview';
+import DesignPreview from './pages/DesignPreview';
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
+  const [theme, setTheme] = useState(localStorage.getItem('selected-theme') || 'default');
+
+  // Apply theme to body
+  useEffect(() => {
+    document.body.classList.remove('theme-light', 'theme-cyber', 'theme-nordic');
+    if (theme !== 'default') {
+      document.body.classList.add(`theme-${theme}`);
+    }
+    localStorage.setItem('selected-theme', theme);
+  }, [theme]);
 
   // Global mouse position tracking for high-performance CSS parallax
   useEffect(() => {
@@ -43,6 +54,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/fonts" element={<FontPreview />} />
           <Route path="/gradients" element={<GradientPreview />} />
+          <Route path="/design-preview" element={<DesignPreview theme={theme} setTheme={setTheme} />} />
         </Routes>
       </main>
       <Footer />

@@ -821,5 +821,85 @@ main {
   background-size: 16px 16px;
 }
 
+/* Alternate Theme Definitions */
+
+/* Theme: Neo-Light Mode */
+body.theme-light {
+  --bg-color: #f8fafc;
+  --bg-dots: rgba(15, 23, 42, 0.05);
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #64748b;
+  --accent-color: #4f46e5;
+  --accent-glow: rgba(79, 70, 229, 0.15);
+  --accent-secondary: #4f46e5;
+  --accent-secondary-glow: rgba(79, 70, 229, 0.1);
+  --accent-tertiary: #4f46e5;
+  --accent-tertiary-glow: rgba(79, 70, 229, 0.1);
+  --card-bg: #ffffff99;
+  --card-border: rgba(15, 23, 42, 0.08);
+  --card-border-hover: rgba(79, 70, 229, 0.25);
+  --nav-bg: rgba(248, 250, 252, 0.85);
+}
+body.theme-light::before {
+  background: linear-gradient(-45deg, #f1f5f9, #e2e8f0, #cbd5e1, #94a3b8);
+  background-size: 300% 300%;
+}
+body.theme-light .btn-primary {
+  color: #ffffff;
+}
+
+/* Theme: Cyber-Neon Glass */
+body.theme-cyber {
+  --bg-color: #060814;
+  --bg-dots: rgba(0, 240, 255, 0.08);
+  --text-primary: #ffffff;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+  --accent-color: #00f0ff;
+  --accent-glow: rgba(0, 240, 255, 0.35);
+  --accent-secondary: #00f0ff;
+  --accent-secondary-glow: rgba(0, 240, 255, 0.25);
+  --accent-tertiary: #00f0ff;
+  --accent-tertiary-glow: rgba(0, 240, 255, 0.25);
+  --card-bg: rgba(6, 8, 20, 0.6);
+  --card-border: rgba(0, 240, 255, 0.25);
+  --card-border-hover: rgba(0, 240, 255, 0.5);
+  --nav-bg: rgba(6, 8, 20, 0.85);
+}
+body.theme-cyber::before {
+  background: linear-gradient(-45deg, #060814, #1e1b4b, #3b0764, #701a75);
+  background-size: 300% 300%;
+}
+body.theme-cyber .btn-primary {
+  color: #060814;
+}
+
+/* Theme: Nordic Forest */
+body.theme-nordic {
+  --bg-color: #0c0f0e;
+  --bg-dots: rgba(134, 239, 172, 0.05);
+  --text-primary: #f2f4f3;
+  --text-secondary: #9ca3af;
+  --text-muted: #6b7280;
+  --accent-color: #d97706;
+  --accent-glow: rgba(217, 119, 6, 0.35);
+  --accent-secondary: #d97706;
+  --accent-secondary-glow: rgba(217, 119, 6, 0.25);
+  --accent-tertiary: #d97706;
+  --accent-tertiary-glow: rgba(217, 119, 6, 0.25);
+  --card-bg: #151b19cc;
+  --card-border: rgba(217, 119, 6, 0.18);
+  --card-border-hover: rgba(217, 119, 6, 0.4);
+  --nav-bg: rgba(12, 15, 14, 0.85);
+}
+body.theme-nordic::before {
+  background: linear-gradient(-45deg, #0c0f0e, #022c22, #064e3b, #115e59);
+  background-size: 300% 300%;
+}
+body.theme-nordic .btn-primary {
+  color: #0c0f0e;
+}
+
 
 
