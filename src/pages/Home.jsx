@@ -7,7 +7,8 @@ import {
   Compass, 
   Cpu, 
   BookOpen,
-  Camera
+  Camera,
+  Award
 } from 'lucide-react';
 import ProjectCard from '../components/ProjectCard';
 import ProjectModal from '../components/ProjectModal';
@@ -16,6 +17,28 @@ import BlindsReveal from '../components/BlindsReveal';
 import './Home.css';
 
 const projectsData = [
+  {
+    title: 'Krishi AI Crop Platform',
+    category: 'Engineering & Code',
+    description: 'An AI-powered mobile assistant crop disease diagnostics and speech chat interface in regional dialects.',
+    image: '/assets/logo_krishiai_1777718739708.png',
+    tools: ['Python', 'TensorFlow', 'React Native', 'Machine Learning', 'IoT'],
+    client: 'Agricultural Research Prototype',
+    date: 'January 2026',
+    challenge: 'Develop a lightweight, offline-first mobile app that accurately processes leaf disease images and reads advice aloud in regional languages.',
+    story: 'I trained a lightweight classification model in TensorFlow Lite for edge deployment and integrated it into a React Native frontend. I also built voice-to-text queries so local farmers can speak to the assistant.'
+  },
+  {
+    title: 'Tenughat Power C&I System',
+    category: 'Engineering & Code',
+    description: 'Interned at a thermal station, analyzing digital logic gate sensor networks and SAP database logging pipelines.',
+    image: '/assets/u_connect.png',
+    tools: ['SAP Systems', 'Digital Logic Gates', 'Industrial Control & Instrumentation'],
+    client: 'Tenughat Thermal Power Project',
+    date: 'June 2024',
+    challenge: 'Trace and map the flow of physical telemetry values from low-level thermal boilers up to high-level SAP dashboard nodes.',
+    story: 'During my operations internship, I sat in the Control & Instrumentation station. I tracked physical telemetry values from sensors, mapping them through digital logic gates and database entries.'
+  },
   {
     title: 'Logo for KrishiAI',
     category: 'Logos',
@@ -161,7 +184,7 @@ const Home = () => {
   const [isAboutOpen, setIsAboutOpen] = useState(false);
 
   // Categories list including Startups & Ventures
-  const categories = ['All', 'Logos', 'Branding', 'YouTube Content', 'Marketing', 'Startups & Ventures'];
+  const categories = ['All', 'Logos', 'Branding', 'YouTube Content', 'Marketing', 'Startups & Ventures', 'Engineering & Code'];
 
   // Filter projects based on category selection
   const filteredProjects = selectedCategory === 'All'
@@ -392,6 +415,130 @@ const Home = () => {
                   </div>
                 </div>
               </motion.div>
+            </div>
+          </div>
+        </section>
+      </BlindsReveal>
+
+      {/* Developer Core Section */}
+      <BlindsReveal delay={0.35}>
+        <section id="developer-core" className="dev-core-section section-padding">
+          <div className="container">
+            <div className="section-header text-center" style={{ marginBottom: '4rem' }}>
+              <div className="flex-center animate-fade-in" style={{ marginBottom: '1.5rem' }}>
+                <span className="badge">Developer Core</span>
+              </div>
+              <h2>Engineering & Code</h2>
+              <p className="mx-auto header-description" style={{ maxWidth: '650px' }}>
+                Bridging core computer science principles and database structures with modern software architectures and machine learning prototypes.
+              </p>
+            </div>
+
+            <div className="dev-core-grid">
+              {/* Left Panel: Academic & Internship Timeline */}
+              <div className="dev-academic-card glass">
+                <div className="dev-card-header">
+                  <Cpu size={22} className="dev-icon-accent" />
+                  <h3>Academic & Professional Foundation</h3>
+                </div>
+                <div className="dev-timeline">
+                  <div className="dev-timeline-item">
+                    <div className="dev-timeline-dot"></div>
+                    <div className="dev-timeline-content">
+                      <h4>B.Tech in Computer Science & Engineering</h4>
+                      <span className="dev-timeline-org">Uttaranchal University | 2023 - 2027</span>
+                      <p>Focusing on C/C++, JavaScript, Python, Data Structures, and Software Engineering. (CGPA: 7.0 / 10)</p>
+                    </div>
+                  </div>
+
+                  <div className="dev-timeline-item">
+                    <div className="dev-timeline-dot"></div>
+                    <div className="dev-timeline-content">
+                      <h4>B.S. in Data Science & Applications</h4>
+                      <span className="dev-timeline-org">IIT Madras | 2025 - 2028</span>
+                      <p>Correspondence degree program covering statistics, database queries, and machine learning models. (CGPA: 6.8 / 10)</p>
+                    </div>
+                  </div>
+
+                  <div className="dev-timeline-item">
+                    <div className="dev-timeline-dot"></div>
+                    <div className="dev-timeline-content">
+                      <h4>Operations & Maintenance Intern</h4>
+                      <span className="dev-timeline-org">Tenughat Thermal Power Project | Jun 2024</span>
+                      <p>Explored control systems, low-level logic gate sensors, and enterprise resource database structures (SAP ERP).</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Right Panel: Technical Skills Breakdown */}
+              <div className="dev-skills-card glass">
+                <div className="dev-card-header">
+                  <Layers size={22} className="dev-icon-accent" />
+                  <h3>Engineering Tech Stack</h3>
+                </div>
+                <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', marginBottom: '1.5rem', lineHeight: '1.5' }}>
+                  A breakdown of programming languages, libraries, and frameworks utilized across academic projects and custom tool integrations:
+                </p>
+                <div className="dev-stack-grid">
+                  <div className="dev-stack-item">
+                    <div className="dev-stack-info">
+                      <span>C / C++ & DSA</span>
+                      <span className="dev-stack-percent">85%</span>
+                    </div>
+                    <div className="dev-progress-track">
+                      <div className="dev-progress-fill" style={{ width: '85%' }}></div>
+                    </div>
+                  </div>
+
+                  <div className="dev-stack-item">
+                    <div className="dev-stack-info">
+                      <span>JavaScript & ReactJS / Native</span>
+                      <span className="dev-stack-percent">82%</span>
+                    </div>
+                    <div className="dev-progress-track">
+                      <div className="dev-progress-fill" style={{ width: '82%' }}></div>
+                    </div>
+                  </div>
+
+                  <div className="dev-stack-item">
+                    <div className="dev-stack-info">
+                      <span>Python & Data Science / ML</span>
+                      <span className="dev-stack-percent">75%</span>
+                    </div>
+                    <div className="dev-progress-track">
+                      <div className="dev-progress-fill" style={{ width: '75%' }}></div>
+                    </div>
+                  </div>
+
+                  <div className="dev-stack-item">
+                    <div className="dev-stack-info">
+                      <span>Node.JS & Backend Systems</span>
+                      <span className="dev-stack-percent">70%</span>
+                    </div>
+                    <div className="dev-progress-track">
+                      <div className="dev-progress-fill" style={{ width: '70%' }}></div>
+                    </div>
+                  </div>
+
+                  <div className="dev-stack-item">
+                    <div className="dev-stack-info">
+                      <span>Cybersecurity Principles</span>
+                      <span className="dev-stack-percent">70%</span>
+                    </div>
+                    <div className="dev-progress-track">
+                      <div className="dev-progress-fill" style={{ width: '70%' }}></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="dev-certs-callout" style={{ marginTop: '1.5rem', display: 'flex', gap: '0.75rem', alignItems: 'center' }}>
+                  <Award size={18} style={{ color: 'var(--accent-color)' }} />
+                  <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>
+                    Certifications: NPTEL Cybersecurity (70%) & Let\'s Upgrade Node.JS Bootcamp.
+                  </span>
+                </div>
+              </div>
             </div>
           </div>
         </section>

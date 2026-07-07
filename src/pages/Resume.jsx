@@ -5,48 +5,74 @@ import './PageStyles.css';
 const educationData = [
   {
     institution: 'Uttaranchal University, Dehradun',
-    degree: 'Bachelor of Technology in Computer Science and Engineering',
+    degree: 'B.Tech in Computer Science and Engineering',
     duration: '2023 - 2027',
-    details: 'Bachelor of Technology in Computer Science and Engineering focusing on programming in C, C++, JavaScript, and Python. Curriculum covers data structures, algorithms, and software development principles, emphasizing problem-solving and the design of efficient, scalable, and user-friendly applications.'
+    details: 'Studying core computer science including programming (C, C++, JavaScript, Python), data structures, algorithms, and software engineering. (CGPA: 7.0 / 10)'
   },
   {
-    institution: 'Indian Institute of Technology, Madras (Distance Learning)',
-    degree: 'Bachelor of Science in Data Science',
-    duration: '2025 - Present',
-    details: 'Bachelor of Science in Data Science (Distance Learning) from IIT Madras, focused on core concepts of data science, statistics, and AI/ML. Covers data analysis, machine learning algorithms, and real-world applications, with emphasis on problem-solving, data-driven decision-making, and modern analytical tools.'
+    institution: 'IIT Madras (Correspondence)',
+    degree: 'B.S. in Data Science and Applications',
+    duration: '2025 - 2028',
+    details: 'Online degree program focused on core concepts of data science, database query structures, data analysis, statistics, and machine learning models. (CGPA: 6.80 / 10)'
   },
   {
-    institution: 'CBSE Senior Secondary School, Varanasi, Uttar Pradesh',
-    degree: 'Senior Secondary Education (Class 12th)',
-    duration: '2021 - 2023',
-    details: 'Completed science majors. Fun Fact: In the Joint Entrance Examination (JEE), I secured a rank equivalent to the price of a brand new Maruti Alto!'
+    institution: 'Gyandeep Academy, Varanasi',
+    degree: 'Senior Secondary Education (Class 12th CBSE)',
+    duration: '2023',
+    details: 'Completed science majors. (Percentage: 62.40 / 100)'
+  },
+  {
+    institution: 'D.A.V Public School T.T.P.S Lalpania, Bokaro',
+    degree: 'Secondary Education (Class 10th CBSE)',
+    duration: '2021',
+    details: 'Completed general secondary curriculum. (Percentage: 80.00 / 100)'
   }
 ];
 
 const experienceData = [
   {
+    title: 'Operations & Maintenance Intern',
+    org: 'Tenughat Thermal Power Project (Power / Energy)',
+    date: '15 Jun, 2024 - 30 Jun, 2024',
+    desc: 'Worked in the C&I (Control & Instrumentation) department. Studied the enterprise architecture of the plant\'s SAP ERP software, mapping telemetry inputs, data log pipelines, physical sensors, and low-level digital logic gates.'
+  },
+  {
     title: 'Co-Founder & Lead Designer',
     org: 'TeamUp Esports',
     date: '2024 - Present',
-    desc: 'Co-founded a professional Esports brand catering to PlayersUnknownBattleGround (PUBG) players. Served as Graphic Designer, UI/UX developer, and Social Media Manager.'
+    desc: 'Co-founded a professional Esports brand. Designed high-contrast vector brand elements, apparel uniforms, social media banners, and digital gaming assets.'
   },
   {
     title: 'Co-Founder',
     org: 'U-Connect Platform',
     date: '2023 - 2024',
-    desc: 'Co-founded U-Connect, an Educational Resource UpCycling Platform, during my first year of B.Tech CSE. Handled the visual layouts and promotional flyers.'
+    desc: 'Co-founded a peer-to-peer resource sharing platform. Managed UI layouts, promotional assets, and flyer packages to reuse college textbooks.'
   }
 ];
 
-const achievementsData = [];
+const achievementsData = [
+  {
+    title: 'NPTEL Introduction to Cybersecurity',
+    org: 'National Programme on Technology Enhanced Learning (NPTEL)',
+    date: '2025',
+    desc: 'Completed cyber defense concepts, networks, threat assessment metrics, and secure system architectures. (Score: 70 / 100)'
+  },
+  {
+    title: 'Node.JS Bootcamp Graduate',
+    org: 'Let\'s Upgrade Institute',
+    date: '12 Jan, 2026 - 14 Jan, 2026',
+    desc: 'Completed fundamentals of backend programming, REST APIs, asynchronous database queries, and server environments.'
+  }
+];
 
 const skillsData = [
   { name: 'Adobe Photoshop & Illustrator', level: 90 },
-  { name: 'UI/UX & Figma Prototyping', level: 60 },
-  { name: 'Web Dev (HTML/CSS, React, Vite)', level: 80 },
-  { name: 'Photography & Photo Editing', level: 88 },
-  { name: 'Branding & Logo Identity Design', level: 92 },
-  { name: 'Digital Marketing & Social Media Assets', level: 50 }
+  { name: 'C / C++ & Data Structures (DSA)', level: 85 },
+  { name: 'JavaScript & ReactJS / Native', level: 82 },
+  { name: 'UI/UX & Figma Prototyping', level: 75 },
+  { name: 'Python & Machine Learning Concepts', level: 75 },
+  { name: 'Node.JS & Backend Systems', level: 70 },
+  { name: 'Cybersecurity Principles (NPTEL)', level: 70 }
 ];
 
 const Resume = () => {

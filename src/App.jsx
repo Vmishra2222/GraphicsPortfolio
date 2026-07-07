@@ -10,6 +10,7 @@ import Loader from './components/Loader';
 import FontPreview from './pages/FontPreview';
 import GradientPreview from './pages/GradientPreview';
 import DesignPreview from './pages/DesignPreview';
+import DeveloperSectionPreview from './pages/DeveloperSectionPreview';
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -55,6 +56,7 @@ function App() {
           <Route path="/fonts" element={<FontPreview />} />
           <Route path="/gradients" element={<GradientPreview />} />
           <Route path="/design-preview" element={<DesignPreview theme={theme} setTheme={setTheme} />} />
+          <Route path="/dev-preview" element={<DeveloperSectionPreview />} />
         </Routes>
       </main>
       <Footer />
