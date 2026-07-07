@@ -434,109 +434,95 @@ const Home = () => {
               </p>
             </div>
 
-            <div className="dev-core-grid">
-              {/* Left Panel: Academic & Internship Timeline */}
-              <div className="dev-academic-card glass">
-                <div className="dev-card-header">
-                  <Cpu size={22} className="dev-icon-accent" />
-                  <h3>Academic & Professional Foundation</h3>
+            <div className="dev-columns-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '2rem', width: '100%', marginTop: '1rem' }}>
+              {/* Col 1: Education */}
+              <div className="glass" style={{ padding: '2.25rem', borderRadius: '12px', border: '1px solid var(--card-border)', background: 'var(--card-bg)' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', marginBottom: '1.5rem', color: 'var(--accent-color)' }}>
+                  <BookOpen size={20} />
+                  <h3 style={{ fontSize: '1.15rem', color: 'var(--text-primary)', margin: 0 }}>Education</h3>
                 </div>
-                <div className="dev-timeline">
-                  <div className="dev-timeline-item">
-                    <div className="dev-timeline-dot"></div>
-                    <div className="dev-timeline-content">
-                      <h4>B.Tech in Computer Science & Engineering</h4>
-                      <span className="dev-timeline-org">Uttaranchal University | 2023 - 2027</span>
-                      <p>Focusing on C/C++, JavaScript, Python, Data Structures, and Software Engineering. (CGPA: 7.0 / 10)</p>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+                  <div>
+                    <span style={{ fontSize: '0.7rem', color: 'var(--accent-color)', fontWeight: '700', fontFamily: 'monospace' }}>B.TECH CSE (2023-2027)</span>
+                    <h4 style={{ fontSize: '0.9rem', color: 'var(--text-primary)', margin: '0.15rem 0' }}>Uttaranchal University</h4>
+                    <p style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', lineHeight: '1.4', margin: 0 }}>Core CS fundamentals, OOPs, DSA, C++, and Web App Development. (CGPA: 7.0/10)</p>
+                  </div>
+                  <div style={{ borderTop: '1px solid var(--card-border)', paddingTop: '1.25rem' }}>
+                    <span style={{ fontSize: '0.7rem', color: 'var(--accent-color)', fontWeight: '700', fontFamily: 'monospace' }}>B.S. DATA SCIENCE (2025-2028)</span>
+                    <h4 style={{ fontSize: '0.9rem', color: 'var(--text-primary)', margin: '0.15rem 0' }}>IIT Madras (Correspondence)</h4>
+                    <p style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', lineHeight: '1.4', margin: 0 }}>Data structures, statistics, programming, database queries, and ML models. (CGPA: 6.8/10)</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Col 2: Tech Stack Badges */}
+              <div className="glass" style={{ padding: '2.25rem', borderRadius: '12px', border: '1px solid var(--card-border)', background: 'var(--card-bg)' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', marginBottom: '1.5rem', color: 'var(--accent-color)' }}>
+                  <Cpu size={20} />
+                  <h3 style={{ fontSize: '1.15rem', color: 'var(--text-primary)', margin: 0 }}>Tech Stack</h3>
+                </div>
+                
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
+                  <div>
+                    <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)', display: 'block', marginBottom: '0.5rem', fontWeight: 'bold' }}>Languages</span>
+                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
+                      {['C', 'C++', 'Python', 'SQL', 'HTML/CSS', 'JavaScript'].map((lang, idx) => (
+                        <span key={idx} style={{ fontSize: '0.75rem', padding: '0.3rem 0.75rem', borderRadius: '99px', background: 'rgba(255,255,255,0.03)', border: '1px solid var(--card-border)' }}>{lang}</span>
+                      ))}
                     </div>
                   </div>
 
-                  <div className="dev-timeline-item">
-                    <div className="dev-timeline-dot"></div>
-                    <div className="dev-timeline-content">
-                      <h4>B.S. in Data Science & Applications</h4>
-                      <span className="dev-timeline-org">IIT Madras | 2025 - 2028</span>
-                      <p>Correspondence degree program covering statistics, database queries, and machine learning models. (CGPA: 6.8 / 10)</p>
+                  <div>
+                    <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)', display: 'block', marginBottom: '0.5rem', fontWeight: 'bold' }}>Frontend & Systems</span>
+                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
+                      {['ReactJS', 'React Native', 'Figma Prototyping', 'UI/UX'].map((fw, idx) => (
+                        <span key={idx} style={{ fontSize: '0.75rem', padding: '0.3rem 0.75rem', borderRadius: '99px', background: 'rgba(255,255,255,0.03)', border: '1px solid var(--card-border)' }}>{fw}</span>
+                      ))}
                     </div>
                   </div>
 
-                  <div className="dev-timeline-item">
-                    <div className="dev-timeline-dot"></div>
-                    <div className="dev-timeline-content">
-                      <h4>Operations & Maintenance Intern</h4>
-                      <span className="dev-timeline-org">Tenughat Thermal Power Project | Jun 2024</span>
-                      <p>Explored control systems, low-level logic gate sensors, and enterprise resource database structures (SAP ERP).</p>
+                  <div>
+                    <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)', display: 'block', marginBottom: '0.5rem', fontWeight: 'bold' }}>Backend & Frameworks</span>
+                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
+                      {['Node.js REST APIs', 'SAP ERP Telemetry', 'ML Classifiers'].map((be, idx) => (
+                        <span key={idx} style={{ fontSize: '0.75rem', padding: '0.3rem 0.75rem', borderRadius: '99px', background: 'rgba(255,255,255,0.03)', border: '1px solid var(--card-border)' }}>{be}</span>
+                      ))}
                     </div>
                   </div>
                 </div>
               </div>
 
-              {/* Right Panel: Technical Skills Breakdown */}
-              <div className="dev-skills-card glass">
-                <div className="dev-card-header">
-                  <Layers size={22} className="dev-icon-accent" />
-                  <h3>Engineering Tech Stack</h3>
+              {/* Col 3: Practical Internships & Certifications */}
+              <div className="glass" style={{ padding: '2.25rem', borderRadius: '12px', border: '1px solid var(--card-border)', background: 'var(--card-bg)' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', marginBottom: '1.5rem', color: 'var(--accent-color)' }}>
+                  <Award size={20} />
+                  <h3 style={{ fontSize: '1.15rem', color: 'var(--text-primary)', margin: 0 }}>Credentials & Experience</h3>
                 </div>
-                <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', marginBottom: '1.5rem', lineHeight: '1.5' }}>
-                  A breakdown of programming languages, libraries, and frameworks utilized across academic projects and custom tool integrations:
-                </p>
-                <div className="dev-stack-grid">
-                  <div className="dev-stack-item">
-                    <div className="dev-stack-info">
-                      <span>C / C++ & DSA</span>
-                      <span className="dev-stack-percent">85%</span>
-                    </div>
-                    <div className="dev-progress-track">
-                      <div className="dev-progress-fill" style={{ width: '85%' }}></div>
-                    </div>
+                
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
+                  <div>
+                    <span style={{ fontSize: '0.65rem', background: 'rgba(20, 184, 166, 0.1)', color: 'var(--accent-color)', padding: '0.15rem 0.5rem', borderRadius: '4px', fontWeight: '700' }}>INTERNSHIP</span>
+                    <h4 style={{ fontSize: '0.9rem', color: 'var(--text-primary)', margin: '0.35rem 0 0.15rem' }}>Tenughat Thermal Power Station</h4>
+                    <p style={{ fontSize: '0.75rem', color: 'var(--text-secondary)', lineHeight: '1.4', margin: 0 }}>
+                      Worked in C&I. Mapped digital logic gates, plant sensors, and analyzed SAP database tables.
+                    </p>
+                  </div>
+                  
+                  <div style={{ borderTop: '1px solid var(--card-border)', paddingTop: '1rem' }}>
+                    <span style={{ fontSize: '0.65rem', background: 'rgba(255, 255, 255, 0.05)', color: 'var(--text-secondary)', padding: '0.15rem 0.5rem', borderRadius: '4px', fontWeight: '700' }}>CERTIFICATION</span>
+                    <h4 style={{ fontSize: '0.9rem', color: 'var(--text-primary)', margin: '0.35rem 0 0.15rem' }}>NPTEL Cybersecurity</h4>
+                    <p style={{ fontSize: '0.75rem', color: 'var(--text-secondary)', lineHeight: '1.4', margin: 0 }}>
+                      Completed concepts in cyber defense, secure networks, and cryptography. (Score: 70/100)
+                    </p>
                   </div>
 
-                  <div className="dev-stack-item">
-                    <div className="dev-stack-info">
-                      <span>JavaScript & ReactJS / Native</span>
-                      <span className="dev-stack-percent">82%</span>
-                    </div>
-                    <div className="dev-progress-track">
-                      <div className="dev-progress-fill" style={{ width: '82%' }}></div>
-                    </div>
+                  <div style={{ borderTop: '1px solid var(--card-border)', paddingTop: '1rem' }}>
+                    <span style={{ fontSize: '0.65rem', background: 'rgba(255, 255, 255, 0.05)', color: 'var(--text-secondary)', padding: '0.15rem 0.5rem', borderRadius: '4px', fontWeight: '700' }}>SEMINAR</span>
+                    <h4 style={{ fontSize: '0.9rem', color: 'var(--text-primary)', margin: '0.35rem 0 0.15rem' }}>Node.JS Let's Upgrade Bootcamp</h4>
+                    <p style={{ fontSize: '0.75rem', color: 'var(--text-secondary)', lineHeight: '1.4', margin: 0 }}>
+                      Completed server setups, asynchronous queries, and REST APIs.
+                    </p>
                   </div>
-
-                  <div className="dev-stack-item">
-                    <div className="dev-stack-info">
-                      <span>Python & Data Science / ML</span>
-                      <span className="dev-stack-percent">75%</span>
-                    </div>
-                    <div className="dev-progress-track">
-                      <div className="dev-progress-fill" style={{ width: '75%' }}></div>
-                    </div>
-                  </div>
-
-                  <div className="dev-stack-item">
-                    <div className="dev-stack-info">
-                      <span>Node.JS & Backend Systems</span>
-                      <span className="dev-stack-percent">70%</span>
-                    </div>
-                    <div className="dev-progress-track">
-                      <div className="dev-progress-fill" style={{ width: '70%' }}></div>
-                    </div>
-                  </div>
-
-                  <div className="dev-stack-item">
-                    <div className="dev-stack-info">
-                      <span>Cybersecurity Principles</span>
-                      <span className="dev-stack-percent">70%</span>
-                    </div>
-                    <div className="dev-progress-track">
-                      <div className="dev-progress-fill" style={{ width: '70%' }}></div>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="dev-certs-callout" style={{ marginTop: '1.5rem', display: 'flex', gap: '0.75rem', alignItems: 'center' }}>
-                  <Award size={18} style={{ color: 'var(--accent-color)' }} />
-                  <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>
-                    Certifications: NPTEL Cybersecurity (70%) & Let\'s Upgrade Node.JS Bootcamp.
-                  </span>
                 </div>
               </div>
             </div>
