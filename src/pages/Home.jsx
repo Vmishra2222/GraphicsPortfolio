@@ -424,7 +424,7 @@ const Home = () => {
       <BlindsReveal delay={0.35}>
         <section id="developer-core" className="dev-core-section section-padding">
           <div className="container">
-            <div className="section-header text-center" style={{ marginBottom: '4rem' }}>
+            <div className="section-header text-center" style={{ marginBottom: '4rem', position: 'relative', zIndex: 3 }}>
               <div className="flex-center animate-fade-in" style={{ marginBottom: '1.5rem' }}>
                 <span className="badge">Developer Core</span>
               </div>
@@ -434,7 +434,55 @@ const Home = () => {
               </p>
             </div>
 
-            <div className="dev-columns-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '2rem', width: '100%', marginTop: '1rem' }}>
+            {/* Animated Circuit Board Background (TUF Inspired) */}
+            <div className="dev-circuit-background">
+              <svg width="100%" height="100%" viewBox="0 0 1000 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+                {/* Background IC outlines */}
+                <rect x="50" y="50" width="120" height="90" rx="4" stroke="var(--card-border)" strokeWidth="1" strokeDasharray="4 4" />
+                <circle cx="60" cy="60" r="3" fill="var(--card-border)" />
+                <line x1="170" y1="80" x2="190" y2="80" stroke="var(--card-border)" strokeWidth="1" />
+                <line x1="170" y1="100" x2="190" y2="100" stroke="var(--card-border)" strokeWidth="1" />
+                <line x1="170" y1="120" x2="190" y2="120" stroke="var(--card-border)" strokeWidth="1" />
+
+                <rect x="800" y="100" width="130" height="100" rx="4" stroke="var(--card-border)" strokeWidth="1" strokeDasharray="4 4" />
+                <circle cx="810" cy="110" r="3" fill="var(--card-border)" />
+                <line x1="760" y1="130" x2="800" y2="130" stroke="var(--card-border)" strokeWidth="1" />
+                <line x1="760" y1="155" x2="800" y2="155" stroke="var(--card-border)" strokeWidth="1" />
+                <line x1="760" y1="180" x2="800" y2="180" stroke="var(--card-border)" strokeWidth="1" />
+
+                {/* Circuit Traces */}
+                {/* Main vertical trunk */}
+                <path d="M 480,-50 L 480,650" className="circuit-trace-bg" />
+                <path d="M 480,-50 L 480,650" className="circuit-trace-glow glow-1" />
+
+                {/* Left Branch 1 */}
+                <path d="M 480,120 Q 480,150 400,150 L 220,150 Q 180,150 180,190 L 180,380" className="circuit-trace-bg" />
+                <path d="M 480,120 Q 480,150 400,150 L 220,150 Q 180,150 180,190 L 180,380" className="circuit-trace-glow glow-2" />
+                <circle cx="180" cy="380" r="4.5" fill="var(--accent-color)" className="circuit-node-pulse" />
+
+                {/* Left Branch 2 */}
+                <path d="M 220,150 Q 190,150 190,180 L 190,260 L 100,260" className="circuit-trace-bg" />
+                <path d="M 220,150 Q 190,150 190,180 L 190,260 L 100,260" className="circuit-trace-glow glow-3" />
+                <rect x="96" y="256" width="8" height="8" rx="1.5" fill="var(--accent-color)" />
+
+                {/* Right Branch 1 */}
+                <path d="M 480,220 Q 480,250 560,250 L 750,250 Q 790,250 790,290 L 790,440" className="circuit-trace-bg" />
+                <path d="M 480,220 Q 480,250 560,250 L 750,250 Q 790,250 790,290 L 790,440" className="circuit-trace-glow glow-4" />
+                <polygon points="786,440 794,440 790,448" fill="var(--accent-color)" />
+
+                {/* Right Branch 2 */}
+                <path d="M 750,250 Q 780,250 780,280 L 780,360 L 880,360" className="circuit-trace-bg" />
+                <path d="M 750,250 Q 780,250 780,280 L 780,360 L 880,360" className="circuit-trace-glow glow-5" />
+                <circle cx="880" cy="360" r="4.5" fill="var(--accent-color)" className="circuit-node-pulse" />
+
+                {/* Left Branch 3 */}
+                <path d="M 480,380 Q 480,410 420,410 L 300,410 Q 260,410 260,450 L 260,530" className="circuit-trace-bg" />
+                <path d="M 480,380 Q 480,410 420,410 L 300,410 Q 260,410 260,450 L 260,530" className="circuit-trace-glow glow-6" />
+                <rect x="256" y="526" width="8" height="8" rx="1.5" fill="var(--accent-color)" />
+              </svg>
+            </div>
+
+            <div className="dev-columns-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '2rem', width: '100%', marginTop: '1rem', position: 'relative', zIndex: 3 }}>
               {/* Col 1: Education */}
               <div className="glass" style={{ padding: '2.25rem', borderRadius: '12px', border: '1px solid var(--card-border)', background: 'var(--card-bg)' }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', marginBottom: '1.5rem', color: 'var(--accent-color)' }}>
